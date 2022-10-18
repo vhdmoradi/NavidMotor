@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% comment %} this is the poster part {% endcomment %}
+<div class="container-fluid">
+    <div class="row">
+        <img src="{% static '/images/main_page_temp_header.png' %}" alt="تصویر هدر موقت" class="img-fluid h-100">
+    </div>
+</div>
+
+{% comment %} this is introduction section {% endcomment %}
+<section>
+    <div class="container my-5">
+        <div class="row align-items-center">
+            <div class="d-none d-lg-flex col-lg-4 px-auto">
+                <img src="{% static '/images/nm_se_dual_logo.png' %}" alt="لوگوی مشترک نوید موتور و سمنان انرژی" class="img-fluid">
+            </div>
+            <div class="col-lg-8">
+                <h1 class="h4 fw-bold">شرکت صنایع نوید موتور</h1>
+                <p class="mt-3 text-justified text-english fw-semibold" style="direction: ltr; ">Navid Motor Industries company, located at 35 km of historical and industrial city of Tabriz. Navid Motor produces different kinds of electropumps both in linear and foot mounted types for household, industrial and urban appliances. Now the company has more than 200 employees and produces more than 400 different types of electropumps in 24000 square meter area and is one of the most largest producers of electropump in the Middle East. 
+                </p>
+                <p class="mt-3 text-justified">شرکت صنایع نوید موتور در ۳۵ کیلومتری شهر تاریخی و صنعتی تبریز تأسیس شده‌است. هدف این شرکت تولید انواع الکتروپمپ‌های زمینی و خطی برای انواع مصارف صنعتی و خانکی و شهری می‌باشد. هم‌اکنون این شرکت با بیش از ۲۰۰ نفر پرسنل و با تولید بیش از ۴۰۰ تیپ انواع پمپ و الکتروپمپ در مساحتی حدود ۲۴۰۰۰ متر مربع یکی از بزرگترین تولید‌کنندگان الکتروپمپ در خاورمیانه می‌باشد.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% comment %} this is site cards section {% endcomment %}
+<section>
+    <div class="container my-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            {% comment %} کارت راهکار ما {% endcomment %}
+            <div class="col">
+                <div class="card text-center card-hover bg-gray">
+                    <a href="#"><img src="{% static '/images/solution.png' %}" class="card-img-top m-auto mt-3" alt="تصویر کارت راهکار ما" style="width: 200px;"></a>
+                    <div class="card-body">
+                        <a href="#"><h5 class="card-title card-title-text">راهکار ما</h5></a>
+                        <p class="card-text card-body-text">انتخاب الکتروپمپ مناسب برای هر کاربرد</p>
+                    </div>
+                </div>
+            </div>
+            {% comment %} کارت محصولات {% endcomment %}
+            <div class="col">
+                <div class="card text-center card-hover bg-gray">
+                    <a href="#"><img src="{% static '/images/products.png' %}" class="card-img-top m-auto mt-3" alt="تصویر کارت محصولات" style="width: 200px;"></a>
+                    <div class="card-body">
+                        <a href="#"><h5 class="card-title card-title-text">محصولات</h5></a>
+                        <p class="card-text card-body-text">دسته‌بندی الکتروپمپ‌ها با کاربرد و مدل</p>
+                    </div>
+                </div>
+            </div>
+            {% comment %} کارت شبکه فروش نمایندگان {% endcomment %}
+            <div class="col">
+                <div class="card text-center card-hover bg-gray">
+                    <a href="#"><img src="{% static '/images/sales_network.png' %}" class="card-img-top m-auto mt-3" alt="تصویر کارت شبکه نمایندگان فروش" style="width: 200px;"></a>
+                    <div class="card-body">
+                        <a href="#"><h5 class="card-title card-title-text">شبکه نمایندگان فروش</h5></a>
+                        <p class="card-text card-body-text">لیست نمایندگان معتبر نوید موتور در سراسر ایران</p>
+                    </div>
+                </div>
+            </div>
+            {% comment %} کارت خدمات پس از فروش {% endcomment %}
+            <div class="col">
+                <div class="card text-center card-hover bg-gray">
+                    <a href="#"><img src="{% static '/images/after_sales_support.png' %}" class="card-img-top m-auto mt-3" alt="تصویر کارت خدمات پس از فروش" style="width: 200px;"></a>
+                    <div class="card-body">
+                        <a href="#"><h5 class="card-title card-title-text">خدمات پس از فروش</h5></a>
+                        <p class="card-text card-body-text">گارانتی تعویض و خدمات پس از فروش، سریع و همه‌جا</p>
+                    </div>
+                </div>
+            </div>
+            {% comment %} کارت مرکز آموزش نوید موتور {% endcomment %}
+            <div class="col">
+                <div class="card text-center card-hover bg-gray">
+                    <a href="#"><img src="{% static '/images/teaching_center.png' %}" class="card-img-top m-auto mt-3" alt="تصویر کارت مرکز آموزش نوید موتورصولات" style="width: 200px;"></a>
+                    <div class="card-body">
+                        <a href="#"><h5 class="card-title card-title-text">مرکز آموزش نوید موتور</h5></a>
+                        <p class="card-text card-body-text">مطالب آموزشی الکتروپمپ و دوره‌های تخصصی نوید موتور</p>
+                    </div>
+                </div>
+            </div>
+            {% comment %} کارت تور مجازی {% endcomment %}
+            <div class="col">
+                <div class="card text-center card-hover bg-gray">
+                    <a href="#"><img src="{% static '/images/products.png' %}" class="card-img-top m-auto mt-3" alt="تصویر کارت تور مجازی" style="width: 200px;"></a>
+                    <div class="card-body">
+                        <a href="#"><h5 class="card-title card-title-text">تور مجازی</h5></a>
+                        <p class="card-text card-body-text">آشنایی با نوید موتور با تور مجازی شرکت صنایع نوید موتور</p>
+                    </div>
+                </div>
+            </div>
+           
+            
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
+
+    
