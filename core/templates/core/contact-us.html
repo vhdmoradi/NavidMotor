@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_tags %}
+
+
+{% block title %}
+    تماس با ما
+{% endblock title %}
+    
+
+
+{% block content %}
+{% comment %} بخش بالایی صفحه تماس با ما، شامل متن مقدمه {% endcomment %}
+<section>
+    <div class="container my-5">
+        <div class="row">
+            <h1 class="h4 fw-bold mb-3">با ما در ارتباط باشید</h1>
+            <p class="text-justified nm-text-color">
+                {% for text in contact_page_data %}
+                    {% if "ابتدایی" in text.key %}
+                        {{ text.value }}
+                    {% else %}
+                    {% endif %}
+                {% endfor %}
+            </p>
+        </div>
+    </div>
+</section>
+
+
+{% comment %} بخش دوم، شامل کارت‌های اطلاعات تماس {% endcomment %}
+<section>
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card mb-5">
+                    <div class="card-body">
+                        <h2 class="h5 card-title text-center">دفتر مرکزی کارخانه</h2>  
+                        <hr class="card-text">                      
+                        {% for text in contact_page_data  %}
+                            {% if text.key == "آدرس دفتر کارخانه صفحه تماس با ما" %}
+                                <p class="card-text"><i class="bi bi-geo-alt me-2"></i>
+                                    {{ text.value }}
+                                </p>
+                            {% elif text.key == "شماره تماس اول دفتر کارخانه صفحه تماس با ما" %}
+                                <p class="card-text"><i class="bi bi-telephone me-2"></i>
+                                    {{ text.value }}
+                                </p>
+                            {% elif text.key == "شماره تماس دوم دفتر کارخانه صفحه تماس با ما" %}
+                                <p class="card-text"><i class="bi bi-telephone me-2"></i>
+                                    {{ text.value }}
+                                </p>
+                            {% elif text.key == "شماره فکس دفتر کارخانه صفحه تماس با ما" %}
+                                <p class="card-text"><i class="bi bi-newspaper me-2"></i>
+                                    {{ text.value }}
+                                </p>
+                            {% elif text.key == "ایمیل دفتر کارخانه صفحه تماس با ما" %}
+                                <p class="card-text"><i class="bi bi-envelope me-2"></i>
+                                    {{ text.value }}
+                                </p>
+                            {% endif %}
+                        {% endfor %}
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-5">
+                    <div class="card-body">
+                        <h2 class="h5 card-title text-center">دفتر مرکزی فروش</h2>                        
+                        <hr class="card-text">
+                        {% for text in contact_page_data  %}
+                            {% if text.key == "آدرس دفتر فروش صفحه تماس با ما" %}
+                                <p class="card-text"><i class="bi bi-geo-alt me-2"></i>
+                                    {{ text.value }}
+                                </p>
+                            {% elif text.key == "شماره تماس اول دفتر فروش صفحه تماس با ما" %}
+                                <p class="card-text"><i class="bi bi-telephone me-2"></i>
+                                    {{ text.value }}
+                                </p>
+                            
+                            {% elif text.key == "شماره تماس دوم دفتر فروش صفحه تماس با ما" %}
+                                <p class="card-text"><i class="bi bi-telephone me-2"></i>
+                                    {{ text.value }}
+                                </p>
+                            {% elif text.key == "شماره فکس دفتر فروش صفحه تماس با ما" %}
+                                <p class="card-text"><i class="bi bi-newspaper me-2"></i>
+                                    {{ text.value }}
+                                </p>
+                            {% elif text.key == "ایمیل دفتر فروش صفحه تماس با ما" %}
+                                <p class="card-text"><i class="bi bi-envelope me-2"></i>
+                                    {{ text.value }}
+                                </p>
+                            {% endif %}
+                        {% endfor %}
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% comment %} بخش سوم برای فرم تماس با ما {% endcomment %}
+<section>
+    <form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Submit</button>
+</form>
+</section>
+{% endblock content %}
+
+    

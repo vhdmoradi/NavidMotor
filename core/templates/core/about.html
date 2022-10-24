@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    درباره ما
+{% endblock title %}
+    
+{% block content %}
+    {% comment %} this is the poster part {% endcomment %}
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <img src="{% static '/images/main_page_temp_header.png' %}" alt="تصویر هدر موقت" class="img-fluid">
+            </div>
+        </div>
+    </section>
+
+    {% comment %} بخش اطلاعات گروه صنایع پمپ سازی ایران و شرکت صنایع نوید موتور {% endcomment %}
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="text-justified">
+                    <h2 class="h4 fw-bolder mt-5 mb-3">گروه صنایع پمپ‌سازی ایران</h2>
+                    <p class="nm-text-color lh-lg">
+                        {% for text in about_page_data %}
+                            {% if "پمپیران" in text.key %}
+                            {{ text.value }}
+                            {% else %}
+                            {% endif %}
+                        {% endfor %}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="text-justified">
+                    <h1 class="h4 fw-bolder mt-5 mb-3">شرکت صنایع نوید موتور</h1>
+                    <p class="nm-text-color lh-lg">
+                        {% for text in about_page_data %}
+                            {% if "نوید" in text.key %}
+                            {{ text.value }}
+                            {% else %}
+                            {% endif %}
+                        {% endfor %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% comment %} بخش تاریخچه نوید موتور {% endcomment %}
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <h2 class="h4 fw-bolder mb-3">مروری بر تاریخچه نوید موتور</h2>
+                <img src="{% static '/images/timeline_sm.png' %}" alt="تایملاین سایز موبایل" class="d-flex d-md-none img-fluid">
+                <img src="{% static '/images/timeline_md.png' %}" alt="تایملاین سایز md" class="d-none d-md-flex d-lg-none img-fluid">
+                <img src="{% static '/images/timeline_lg.png' %}" alt="تایملاین سایز lg" class="d-none d-lg-flex img-fluid">
+            </div>
+        </div>
+    </section>
+
+    {% comment %} بخش چرا نوید موتور {% endcomment %}
+    <section>
+        <div class="container my-5">
+            <h2 class="h4 fw-bolder mb-5">چرا نوید موتور</h2>
+            <div class="row justify-content-evenly">
+                <div class="col-10 col-sm-8 col-lg-4 mb-3 d-flex align-items-stretch">
+                     <div class="card text-center card-hover bg-gray">
+                            <img src="{% static '/images/why_us_pump.png' %}" class="card-img-top m-auto mt-3" alt="تصویر کارت تیپ و مدل" style="width: 150px;">                        <div class="card-body">
+                            <h5 class="card-title card-title-text">تیپ و مدل‌های گسترده و کامل</h5>
+                            <p class="card-text" style="color: #3b3b3b;">
+                                {% for text in about_page_data %}
+                                    {% if "تیپ و مدل" in text.key %}
+                                    {{ text.value }}
+                                    {% else %}
+                                    {% endif %}
+                                {% endfor %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10 col-sm-8 col-lg-4 mb-3 d-flex align-items-stretch">
+                     <div class="card text-center card-hover bg-gray">
+                            <img src="{% static '/images/why_us_after_sales.png' %}" class="card-img-top m-auto mt-3" alt="تصویر کارت خدمات پس از فروش" style="width: 150px;">                        
+                            <div class="card-body">
+                            <h5 class="card-title card-title-text">خدمات پس از فروش و گارانتی تعویض</h5>
+                            <p class="card-text" style="color: #3b3b3b;">
+                                {% for text in about_page_data %}
+                                    {% if "خدمات" in text.key %}
+                                    {{ text.value }}
+                                    {% else %}
+                                    {% endif %}
+                                {% endfor %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10 col-sm-8 col-lg-4 mb-3 d-flex align-items-stretch">
+                     <div class="card text-center card-hover bg-gray">
+                            <img src="{% static '/images/why_us_award.png' %}" class="card-img-top m-auto mt-3" alt="تصویر کارت مواد با کیفیت و استانداردهای به روز" style="width: 150px;">                        
+                            <div class="card-body">
+                            <h5 class="card-title card-title-text">مواد با کیفیت و استانداردهای به روز</h5>
+                            <p class="card-text" style="color: #3b3b3b;">
+                                {% for text in about_page_data %}
+                                    {% if "کیفیت" in text.key %}
+                                    {{ text.value }}
+                                    {% else %}
+                                    {% endif %}
+                                {% endfor %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
+    

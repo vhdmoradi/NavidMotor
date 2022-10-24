@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="{% static 'css/main_styles.css' %}" />
+    <title>
+    {% block title %}
+      
+    {% endblock title %}
+      </title>
   </head>
   <body>
     {% comment %} this header is navbar {% endcomment %}
@@ -22,9 +27,11 @@
       {% comment %} // TODO: مشکل کولپس شدن در اندازه 1167 {% endcomment %}
       <nav class="navbar navbar-expand-lg " style="height: 75px; background-color: #009999">
         <div class="container-fluid">
-          <a class="navbar-brand text-white" target="_blank" href="https://navidmotor.ir"
-            ><span class="h4 fw-bold">نوید موتور</span></a
+          <a class="navbar-brand text-white py-0" href="{% url 'home' %}"
+            ><img src="{% static '/images/intro_logo_sm_padding.png' %}" alt="لوگوی نوید موتور" class="img-fluid ms-3"></a
           >
+            <div class="ms-auto me-3 d-flex fs-3 d-lg-none"><i class="bi bi-search icon-style"></i></div>
+
           <button
             class="navbar-toggler"
             type="button"
@@ -37,10 +44,10 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           {% comment %} //TODO مشکل عرض نویگیشن بار در حالت کولپس {% endcomment %}
-          <div class="collapse navbar-collapse mt-2 mt-lg-0 px-3 px-lg-0" id="navbarSupportedContent" style="background-color: #009999; border-radious: 10px;">
+          <div class="collapse navbar-collapse px-3 px-lg-0 rounded-bottom" id="navbarSupportedContent" style="background-color: #009999;">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#"
+                <a class="nav-link" aria-current="page" href="{% url 'about_us' %}"
                   >درباره ما</a
                 >
               </li>
@@ -78,10 +85,10 @@
                 <a class="nav-link">مرکز آموزش نوید موتور</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link">تماس با ما</a>
+                <a href="{% url 'contact_us' %}" class="nav-link">تماس با ما</a>
               </li>
             </ul>
-            <div class="me-5 d-flex fs-3"><i class="bi bi-search icon-style"></i></div>
+            <div class="me-5 d-none d-lg-flex fs-3 mb-3 mb-lg-0"><i class="bi bi-search icon-style"></i></div>
             {% comment %} //TODO ساخت سرچ باکس با آیکون سرچ {% endcomment %}
             {% comment %} <form class="ms-auto me-3 d-none d-lg-flex" role="search">
               <input
@@ -116,17 +123,17 @@
           <hr>
         </div>
         <p class="lh-lg lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-geo-alt me-2"></i>تبریز، جاده آذرشهر، شهرک صنعتی شهید سلیمی، بلوک ۳۷/۲، قطعه ۱۱</p>
-        <p class="lh-lg lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-telephone me-2"></i></i>۸۲۸۸ ۳۴۴۲ - ۰۴۱ | ۸۲۷۷ ۳۴۳۲ - ۰۴۱</p>
+        <p class="lh-lg lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-telephone me-2"></i></i>۸۲۸۸ ۳۴۳۲ - ۰۴۱ | ۸۲۷۷ ۳۴۳۲ - ۰۴۱</p>
         <p class="lh-lg lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-newspaper me-2"></i></i>۸۲۹۹ ۳۴۳۲ - ۰۴۱</p>
         <p class="lh-lg lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-envelope me-2"></i></i>info@navidmotor.com</p>
         <h5 class="fw-bold mt-5">دفتر مرکزی فروش</h5>
         <div class="col-10">
           <hr>
         </div>
-        <p class="lh-sm" style="font-size: 0.9rem;"><i class="bi bi-geo-alt me-2"></i>تهران، خیابان طالقانی، خیابان بهار شمالی، پلاک ۳۱۳</p>
-        <p class="lh-sm" style="font-size: 0.9rem;"><i class="bi bi-telephone me-2"></i></i>۵۷۰۹ ۷۷۵۲ - ۰۲۱ | ۷۷۵۲ ۵۷۰۸ - ۰۲۱</p>
-        <p class="lh-sm" style="font-size: 0.9rem;"><i class="bi bi-newspaper me-2"></i></i>۲۳۲۴ ۷۷۵۲ - ۰۲۱</p>
-        <p class="lh-sm" style="font-size: 0.9rem;"><i class="bi bi-envelope me-2"></i></i>info@navidmotor.com</p>
+        <p class="lh-lg lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-geo-alt me-2"></i>تهران، خیابان طالقانی، خیابان بهار شمالی، پلاک ۳۱۳</p>
+        <p class="lh-lg lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-telephone me-2"></i></i>۵۷۰۹ ۷۷۵۲ - ۰۲۱ | ۵۷۰۸ ۷۷۵۲ - ۰۲۱</p>
+        <p class="lh-lg lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-newspaper me-2"></i></i>۲۳۲۴ ۷۷۵۲ - ۰۲۱</p>
+        <p class="lh-lg lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-envelope me-2"></i></i>sales@navidmotor.com</p>
       </div>
 
       {% comment %} ستون پیوندها {% endcomment %}
