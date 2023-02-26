@@ -6,15 +6,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.rtl.min.css"
-      integrity="sha384-7mQhpDl5nRA5nY9lr8F1st2NbIly/8WqhjTp+0oFxEA/QUuvlbF6M1KXezGBh3Nb"
-      crossorigin="anonymous"
-    />
+      <link rel="stylesheet" href="{% static 'css/bootstrap.rtl.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-
     <link rel="stylesheet" href="{% static 'css/main_styles.css' %}" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+     crossorigin=""/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+      <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+     integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+     crossorigin=""></script>
+      <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
     <title>
     {% block title %}
       
@@ -25,7 +27,7 @@
     {% comment %} this header is navbar {% endcomment %}
     <header class="sticky-top">
       {% comment %} // TODO: مشکل کولپس شدن در اندازه 1167 {% endcomment %}
-      <nav class="navbar navbar-expand-lg " style="height: 75px; background-color: #009999">
+      <nav class="navbar navbar-expand-lg " style="height: 75px; background-color: #009999;">
         <div class="container-fluid">
           <a class="navbar-brand text-white py-0" href="{% url 'home' %}"
             ><img src="{% static '/images/intro_logo_sm_padding.png' %}" alt="لوگوی نوید موتور" class="img-fluid ms-3"></a
@@ -52,7 +54,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#"
+                <a class="nav-link" aria-current="page" href="{% url 'solution_main' %}"
                   >راهکار ما</a
                 >
               </li>
@@ -67,16 +69,12 @@
                   محصولات
                 </a>
                 <ul class="dropdown-menu slideIn animate mt-lg-3" style="background-color: #009999; color: white;">
-                  <li><a class="dropdown-item" href="#">محوصلات خانگی</a></li>
-                  <li><a class="dropdown-item" href="#">محصولات صنعتی</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="#">همه محصولات</a>
-                  </li>
+                  <li><a class="dropdown-item" href="{% url 'products_usage_main' %}">محوصلات بر اساس کاربرد</a></li>
+                  <li><a class="dropdown-item" href="{% url 'products_model_main' %}">محصولات بر اساس مدل</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link">شبکه فروش</a>
+                <a href="{% url 'sales_network' %}" class="nav-link">شبکه فروش</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link">خدمات پس از فروش</a>
@@ -88,7 +86,7 @@
                 <a href="{% url 'contact_us' %}" class="nav-link">تماس با ما</a>
               </li>
             </ul>
-            <div class="me-5 d-none d-lg-flex fs-3 mb-3 mb-lg-0"><i class="bi bi-search icon-style"></i></div>
+{#            <div class="me-5 d-none d-lg-flex fs-3 mb-3 mb-lg-0"><i class="bi bi-search icon-style"></i></div>#}
             {% comment %} //TODO ساخت سرچ باکس با آیکون سرچ {% endcomment %}
             {% comment %} <form class="ms-auto me-3 d-none d-lg-flex" role="search">
               <input
@@ -114,31 +112,33 @@
   
 
 <footer style="background-color: #3B3B3B">
-  <div class="container">
+  <div class="container-fluid p-5">
     <div class="row">
       {% comment %} ستون اطلاعات تماس کارخانه {% endcomment %}
-      <div class="col-md-5 text-white">
-        <h5 class="fw-bold mt-5">دفتر مرکزی کارخانه</h5>
+      <div class="col-md-4 text-white">
+        <h5 class="fw-bold mt-4">دفتر مرکزی کارخانه</h5>
         <div class="col-10">
           <hr>
         </div>
-        <p class="lh-lg lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-geo-alt me-2"></i>تبریز، جاده آذرشهر، شهرک صنعتی شهید سلیمی، بلوک ۳۷/۲، قطعه ۱۱</p>
-        <p class="lh-lg lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-telephone me-2"></i></i>۸۲۸۸ ۳۴۳۲ - ۰۴۱ | ۸۲۷۷ ۳۴۳۲ - ۰۴۱</p>
-        <p class="lh-lg lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-newspaper me-2"></i></i>۸۲۹۹ ۳۴۳۲ - ۰۴۱</p>
-        <p class="lh-lg lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-envelope me-2"></i></i>info@navidmotor.com</p>
-        <h5 class="fw-bold mt-5">دفتر مرکزی فروش</h5>
+        <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-geo-alt me-2"></i>تبریز، جاده آذرشهر، شهرک صنعتی شهید سلیمی، بلوک ۳۷/۲، قطعه ۱۱</p>
+        <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-telephone me-2"></i></i>۸۲۸۸ ۳۴۳۲ - ۰۴۱ | ۸۲۷۷ ۳۴۳۲ - ۰۴۱</p>
+        <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-newspaper me-2"></i></i>۸۲۹۹ ۳۴۳۲ - ۰۴۱</p>
+        <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-envelope me-2"></i></i>info@navidmotor.com</p>
+      </div>
+        <div class="col-md-4 text-white">
+        <h5 class="fw-bold mt-4">دفتر مرکزی فروش</h5>
         <div class="col-10">
           <hr>
         </div>
-        <p class="lh-lg lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-geo-alt me-2"></i>تهران، خیابان طالقانی، خیابان بهار شمالی، پلاک ۳۱۳</p>
-        <p class="lh-lg lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-telephone me-2"></i></i>۵۷۰۹ ۷۷۵۲ - ۰۲۱ | ۵۷۰۸ ۷۷۵۲ - ۰۲۱</p>
-        <p class="lh-lg lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-newspaper me-2"></i></i>۲۳۲۴ ۷۷۵۲ - ۰۲۱</p>
-        <p class="lh-lg lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-envelope me-2"></i></i>sales@navidmotor.com</p>
+        <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-geo-alt me-2"></i>تهران، خیابان طالقانی، خیابان بهار شمالی، پلاک ۳۱۳</p>
+        <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-telephone me-2"></i></i>۵۷۰۹ ۷۷۵۲ - ۰۲۱ | ۵۷۰۸ ۷۷۵۲ - ۰۲۱</p>
+        <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-newspaper me-2"></i></i>۲۳۲۴ ۷۷۵۲ - ۰۲۱</p>
+        <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-envelope me-2"></i></i>sales@navidmotor.com</p>
       </div>
 
       {% comment %} ستون پیوندها {% endcomment %}
       <div class="col-md-4 text-white">
-        <h5 class="fw-bold mt-5">پیوندها</h5>
+        <h5 class="fw-bold mt-4">پیوندها</h5>
         <div class="col-10">
           <hr>
         </div>
@@ -148,23 +148,27 @@
         <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-motherboard me-2"></i>سامانه تحت وب نویدموتور (لینک ۲)</p></a>
         <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-check2-circle me-2"></i>سامانه ثبت سفارش نمایندگان</p></a>
         <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-envelope me-2"></i>پورتال ایمیل</p></a>
+        <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-instagram me-2"></i>اینستاگرام</p></a>
+        <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-whatsapp me-2"></i>واتس‌اپ</p></a>
       </div>
       
       {% comment %} ستون شبکه‌های اجتماعی {% endcomment %}
-      <div class="col-md-3 text-white">
-        <div class="mt-5">
-          {% comment %} //TODO add navid motor logo to this part {% endcomment %}
-          {% comment %} <img src="" alt="" class="img-fluid"> {% endcomment %}
-          <h3 class="fw-bold text-center ">لوگوی نوید موتور</h3>
-          <h6 class="mt-5">نوید موتور در شبکه‌های اجتماعی</h6>
-          <div class="col-10">
-            <hr>
-          </div>
-          <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-instagram me-2"></i>اینستاگرام</p></a>
-          <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-whatsapp me-2"></i>واتس‌اپ</p></a>
-
-        </div>
-      </div>
+{#      <div class="col-md-2 text-white">#}
+{#        <div class="mt-5">#}
+{#          {% comment %} //TODO add navid motor logo to this part {% endcomment %}#}
+{#          {% comment %} <img src="" alt="" class="img-fluid"> {% endcomment %}#}
+{#          <a class="navbar-brand text-white py-0" href="{% url 'home' %}"#}
+{#            ><img src="{% static '/images/white_logo_2.png' %}" alt="لوگوی نوید موتور" class="img-fluid ms-md-5"></a#}
+{#          >#}
+{#          <h6 class="mt-5">نوید موتور در شبکه‌های اجتماعی</h6>#}
+{#          <div class="col-10">#}
+{#            <hr>#}
+{#          </div>#}
+{#          <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-instagram me-2"></i>اینستاگرام</p></a>#}
+{#          <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-whatsapp me-2"></i>واتس‌اپ</p></a>#}
+{##}
+{#        </div>#}
+{#      </div>#}
     </div>
     <div class="row justify-content-center text-center">
       <div class="col-8"><hr class="text-white"></div>
@@ -174,10 +178,6 @@
   </div>
 </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
+
   </body>
 </html>

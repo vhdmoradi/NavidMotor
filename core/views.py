@@ -1,20 +1,20 @@
-from django.shortcuts import render, redirect
-from django.urls import reverse
+from django.shortcuts import redirect
 from django.views.generic import ListView
-from django.core.mail import send_mail, BadHeaderError
-from django.http import HttpResponse
+from django.contrib import messages
+from django.core.serializers import serialize
+import json
 
 from .forms import ContactUsForm
-
-# from django.forms.models import model_to_dict
-
-
 from .models import SiteDataKeyValue
+from salesnetwork.models import Agency
 
 
 class HomePageView(ListView):
     """
-    In this view we are fetching site data from database, in a function named get_context_data. In this function, we filter the model for objects that contains the word 'اصلی', therefore fetching data referring to the main page only. After that the context list is sent to the template, and there with a for loop and an if statement, each key, value set is chosen for the proper place.
+    In this view we are fetching site data from database, in a function named get_context_data. In this function,
+    we filter the model for objects that contains the word 'اصلی', therefore fetching data referring to the main page
+    only. After that the context list is sent to the template, and there with a for loop and an if statement,
+    each key, value set is chosen for the proper place.
     """
 
     model = SiteDataKeyValue
@@ -25,10 +25,15 @@ class HomePageView(ListView):
         context["home_page_data"] = self.model.objects.filter(key__icontains="اصلی")
         return context
 
+    # just test:
+
 
 class AboutPageView(ListView):
     """
-    In this view we are fetching site data from database, in a function named get_context_data. In this function, we filter the model for objects that contains the word 'درباره', therefore fetching data referring to the about page only. After that the context list is sent to the template, and there with a for loop and an if statement, each key, value set is chosen for the proper place.
+    In this view we are fetching site data from database, in a function named get_context_data. In this function,
+    we filter the model for objects that contains the word 'درباره', therefore fetching data referring to the about
+    page only. After that the context list is sent to the template, and there with a for loop and an if statement,
+    each key, value set is chosen for the proper place.
     """
 
     model = SiteDataKeyValue
@@ -40,44 +45,56 @@ class AboutPageView(ListView):
         return context
 
 
-class ContactUsPageView(ListView):
-    """
-    In this view we are fetching site data from database, in a function named get_context_data. In this function, we filter the model for objects that contains the word 'تماس', therefore fetching data referring to the about page only. After that the context list is sent to the template, and there with a for loop and an if statement, each key, value set is chosen for the proper place.
-    """
+# my previous view, without form
+# class ContactUsPageView(ListView):
+#     """
+#     In this view we are fetching site data from database, in a function named get_context_data. In this function,
+#     we filter the model for objects that contains the word 'تماس', therefore fetching data referring to the about
+#     page only. After that the context list is sent to the template, and there with a for loop and an if statement,
+#     each key, value set is chosen for the proper place.
+#     """
+#
+#     model = SiteDataKeyValue
+#     template_name: str = "core/contact-us.html"
+#
+#     def get_context_data(self, **kwargs):
+#         context = super(ContactUsPageView, self).get_context_data(**kwargs)
+#         context["contact_page_data"] = self.model.objects.filter(key__icontains="تماس")
+#         return context
 
+
+class ContactUsPageView(ListView):
     model = SiteDataKeyValue
     template_name: str = "core/contact-us.html"
+    context_object_name = "contact_page_data"
+    success_url = "/"
+
+    def get_queryset(self):
+        return SiteDataKeyValue.objects.filter(key__icontains="تماس")
 
     def get_context_data(self, **kwargs):
-        context = super(ContactUsPageView, self).get_context_data(**kwargs)
-        context["contact_page_data"] = self.model.objects.filter(key__icontains="تماس")
+        form = ContactUsForm()
+        context = super().get_context_data(**kwargs)
+        if not kwargs.get("form"):
+            context["form"] = form
+
         return context
 
-
-def contact_us(request):
-    if request.method == "POST":
-        form = ContactUsForm(request.POST)
+    def post(self, request, **kwargs):
+        data = request.POST
+        self.object_list = self.get_queryset()
+        form = ContactUsForm(data)
         if form.is_valid():
-            subject = "پیام ارسالی از فرم تماس با ما"
-            body = {
-                "first_name": form.changed_data["first_name"],
-                "last_name": form.changed_data["last_name"],
-                "email": form.changed_data["email_address"],
-                "message": form.changed_data["message"],
-            }
+            form.save()
+            messages.success(
+                request,
+                "پیام شما با موفقیت ارسال گردید. کارشناسان ما در صورت نیاز با شما تماس خواهند گرفت.",
+            )
+            return redirect("/contact-us/")
+        form = ContactUsForm()
+        context = self.get_context_data(form=form)
+        return self.render_to_response(context)
 
-            message = "\n".join(body.values())
 
-            try:
-                send_mail(
-                    subject,
-                    message,
-                    "vahid.moradi001@gmail.com",
-                    ["vahid.moradi001@gmail.com"],
-                )
-            except BadHeaderError:
-                return HttpResponse("Invalid header found.")
-
-            return redirect(reverse("contact_us"))
-    form = ContactUsForm()
-    return render(request, "core/contact-us.html", {"form": form})
+# class ContactUsSuccessView(TemplateView):
+#     template_name: str = "core/contact_us_success.html"

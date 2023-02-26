@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    شبکه فروش
+{% endblock title %}
+
+{% block content %}
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <h5 class="nm-text-color">فهرست نمایندگان نوید موتور</h5>
+                <p class="nm-text-color text-justified mb-3 px-3 px-lg-0">
+                    {% for text in sales_network_page_data %}
+                        {% if "فارسی" in text.key %}
+                            {{ text.value }}
+                        {% else %}
+                        {% endif %}
+                    {% endfor %}
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-4 overflow-scroll mb-5 my-lg-3">
+{#                    this part is for the agency list#}
+                    <div class="input-group mb-3 sticky-top" style="z-index: 1010">
+                        <input type="text" id="searchText" class="form-control" placeholder="نام نمایندگی، شهر یا استان را جستجو کنید" aria-label="Agency search input" onkeyup="searchAgency()">
+                        <span class="input-group-text"><i class="bi bi-search"></i></span>
+                    </div>
+                     <ul style="height: 30vh; list-style-type:none;" class="px-0" id="agencyList">
+                        {% for agency in agency_list %}
+                            <li  data-index="{{ agency.id }}" class="mb-4">
+                                <div class="card border border-secondary rounded" onclick="moveMap({{ agency.latitude }}, {{ agency.longitude }}, {{ agency.id }})" style="cursor: pointer; z-index: 1000">
+                                    <div class="card-body" >
+                                        <h5 class="card-title card-title-text" id="agencyTitle"> نمایندگی {{ agency.title }}</h5>
+                                        <p class="card-text" id="agencyOwnerName">به مدیریت: {{ agency.owner_name }}</p>
+                                        <p class="card-text lh-1" id="agencyCity">شهر: {{ agency.city }}</p>
+                                        <p class="card-text lh-1 visually-hidden" id="agencyProvince">استان: {{ agency.province }}</p>
+                                        <hr>
+                                        <p class="card-text lh-1">تلفن: {{ agency.telephone }}</p>
+                                        <p class="card-text lh-1">تلفن همراه: {{ agency.mobile }}</p>
+                                        <p class="card-text lh-1">
+                                            {% if agency.fax %}
+                                                فکس: {{ agency.fax }}
+                                            {% endif %}
+                                        </p>
+                                        <p class="card-text">آدرس: {{ agency.address }}</p>
+                                    </div>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {{ agency_list|json_script:"agency-json" }}
+{#              this part is for the map #}
+                <div class="col-12 col-lg-8" id="map" style="height: 60vh"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+{#    <div id='map' style='width: 800px; height: 500px;'></div>#}
+    <script src="{% static 'salesnetwork/js/mapScript.js' %}"></script>
+{% endblock content %}

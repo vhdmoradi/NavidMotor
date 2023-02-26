@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    جزئیات محصول
+{% endblock title %}
+
+{% block content %}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 col-lg-4 px-0">
+                    {% include "products/products_sidebar.html" %}
+                </div>
+                <div class="col-6 col-lg-8 pe-5 pt-5">
+                    <div class="row align-items-center">
+                        <div class="col-md-3 text-center" id="product-image">
+                            <img src="{{ product.pump_image.url }}" alt="تصویر الکتروپمپ {{ product.pump_name }}" style="width: 150px;">
+                        </div>
+                        <div class="col-md-6" id="product-technical-datasheet">
+                            <h1 class="h5 nm-text-color fw-bold">الکتروپمپ {{ product.main_model }} {{ product.pump_name }}</h1>
+                            <p class="nm-text-color">{{ product.pump_type.description_fa|linebreaks }}</p>
+                        </div>
+                        <div class="col-md-3 text-center" id="nav-buttons">
+                            <a href="{% url 'sales_network' %}" class="btn btn-primary w-100" target="_blank">نزدیک‌ترین نماینده فروش</a>
+                            <a href="{% url 'contact_us' %}" class="btn btn-primary my-2 w-100" target="_blank">درخواست راهنمایی فنی</a>
+                            <a href="{{ product.pump_technical_datasheet_fa.url }}" class="btn btn-primary w-100" target="_blank">فایل مشخصات فنی</a>
+                        </div>
+                    </div>
+                    <div id="chart-div" class="m-md-5">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    {{ head_flow_dataset_x|json_script:"head_flow_dataset_x" }}
+    {{ head_flow_dataset_y|json_script:"head_flow_dataset_y" }}
+    {{ product.pump_name|json_script:"pump_name" }}
+    </section>
+    <script>
+        const ctx = document.getElementById("myChart");
+        let dataset_x = JSON.parse(document.getElementById("head_flow_dataset_x").textContent);
+        let dataset_y = JSON.parse(document.getElementById("head_flow_dataset_y").textContent);
+        let pump_name = JSON.parse(document.getElementById("pump_name").textContent);
+        console.log(dataset_x);
+        new Chart(ctx, {
+            type: "line",
+            data: {
+                labels: dataset_x,
+                datasets: [{
+                    label: pump_name,
+                    data: dataset_y,
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        display: true,
+                        title: {
+                          display: true,
+                          text: "هد بر حسب (m)",
+                          font:{
+                            size: 18,
+                            weight: "bold",
+                            fontFamily: "IranSans",
+                          },
+                        },
+                        beginAtZero: true
+                    },
+                    x: {
+                        type: "linear",
+                        ticks: {
+                        precision: 0
+                        },
+                        display: true,
+                        title: {
+                          display: true,
+                          text: "دبی بر حسب (m3/hr)",
+                          font:{
+                            size: 18,
+                            weight: "bold",
+                            fontFamily: "IranSans",
+                          },
+                        },
+                        beginAtZero: true,
+                    }
+                }
+            }
+        });
+    </script>
+
+{% endblock content %}

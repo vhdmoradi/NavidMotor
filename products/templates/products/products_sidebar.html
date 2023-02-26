@@ -1,0 +1,77 @@
+{% load static %}
+<div class="main-container" id="side_nav">
+            <div class="sidebar d-md-flex d-none" >
+                <div class="usage-section" id="nav_accordion">
+                    <div class="header-box d-flex justify-content-between mt-3 ms-3">
+                        <a href="{% url 'products_usage_main' %}" class="nm-text-color fw-semibold d-block p-2 w-100 fs-5 header_selector main-anchor">دسته‌بندی بر اساس کاربرد</a>
+                        <button class="btn close-btn px-1 py-0 text-dark d-lg-none d-block"><i class="fa-solid fa-bars fs-2"></i></button>
+                    </div>
+                    <ul class="nav flex-column list-unstyled my-3 ms-3">
+                        {% for usage_item in usage_queryset %}
+                            <li class="nav-item p-2 ms-4">
+                                <a href="#" class="text-decoration-none nm-text-color fw-semibold"
+                                   data-bs-toggle="collapse"
+                                   data-bs-target="#usage_{{ usage_item.id }}">
+                                    <i class="fa-solid fa-angle-left me-2 icon-selector"></i> الکتروپمپ‌های {{ usage_item.usage_name_fa }}
+                                </a>
+                                <ul class="submenu collapse" id="usage_{{ usage_item.id }}" data-bs-parent="#nav_accordion">
+                                    <li class="my-2 ms-4">
+                                        <a href="{% url 'products_single_usage_list' usage_item.id %}"
+                                           class="text-decoration-none nm-text-color">
+                                          <i class="bi bi-check-circle-fill" style="font-size: 0.75rem;"></i> همه‌ی الکتروپمپ‌های {{ usage_item.usage_name_fa }}
+                                        </a>
+                                    </li>
+                                    {% for sub_usage in sub_usage_queryset %}
+                                        {% if sub_usage.usage == usage_item %}
+                                            <li class="my-2 ms-4">
+                                                <a href="{% url 'products_sub_usage_list' sub_usage.id %}" class="text-decoration-none nm-text-color">
+                                                    <i class="bi bi-check-circle-fill" style="font-size: 0.75rem;"></i> کاربرد {{ sub_usage.sub_usage_name_fa }}
+                                                </a>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        {% endfor %}
+                    </ul>
+
+                    <hr class="hr-color ms-4 my-4">
+                    <div class="header-box d-flex justify-content-between mt-3 ms-3">
+                        <a href="{% url 'products_model_main' %}" class="nm-text-color fw-semibold d-block p-2 w-100 fs-5 header_selector">دسته‌بندی بر اساس مدل</a>
+                    </div>
+                    <ul class="nav flex-column list-unstyled my-3 ms-3" >
+                            {% for model_item in main_model_queryset %}
+                                <li class="nav-item p-2 ms-4">
+                                    <a href="#" class="text-decoration-none nm-text-color fw-semibold"
+                                       data-bs-toggle="collapse"
+                                       data-bs-target="#model_{{ model_item.id }}">
+                                        <i class="fa-solid fa-angle-left me-2 icon-selector"></i> الکتروپمپ‌های {{ model_item.model_name_fa }}
+                                    </a>
+                                    <ul class="submenu collapse" id="model_{{ model_item.id }}" data-bs-parent="#nav_accordion">
+                                        <li class="my-2 ms-4">
+                                            <a href="{% url 'products_single_model_list' model_item.id %}"
+                                               class="text-decoration-none nm-text-color">
+                                              <i class="bi bi-check-circle-fill" style="font-size: 0.75rem;"></i> همه‌ی الکتروپمپ‌های {{ model_item.model_name_fa }}
+                                            </a>
+                                        </li>
+                                        {% for pump_type in pump_type_queryset %}
+                                            {% if pump_type.main_model == model_item %}
+                                                <li class="my-2 ms-4">
+                                                    <a href="{% url 'products_single_type_list' pump_type.id %}" class="text-decoration-none nm-text-color">
+                                                       <i class="bi bi-check-circle-fill" style="font-size: 0.75rem;"></i> تیپ  {{ pump_type.type_name }}
+                                                    </a>
+                                                </li>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                </div>
+            </div>
+                <div class="d-lg-none d-block">
+                    <button class="btn open-btn px-3 pt-1 pb-0 mt-4"><i class="fa-solid fa-bars fs-2"></i></button>
+                </div>
+        </div>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="{% static 'js/main.js' %}"></script>

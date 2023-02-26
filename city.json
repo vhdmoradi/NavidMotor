@@ -1,0 +1,3522 @@
+[
+{
+   "model": "core.city",
+   "pk": 1,
+   "fields": {
+      "province_id": 1,
+      "name": "تبريز"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 2,
+   "fields": {
+      "province_id": 1,
+      "name": "كندوان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 3,
+   "fields": {
+      "province_id": 1,
+      "name": "بندر شرفخانه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 4,
+   "fields": {
+      "province_id": 1,
+      "name": "مراغه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 5,
+   "fields": {
+      "province_id": 1,
+      "name": "ميانه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 6,
+   "fields": {
+      "province_id": 1,
+      "name": "شبستر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 7,
+   "fields": {
+      "province_id": 1,
+      "name": "مرند"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 8,
+   "fields": {
+      "province_id": 1,
+      "name": "جلفا"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 9,
+   "fields": {
+      "province_id": 1,
+      "name": "سراب"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 10,
+   "fields": {
+      "province_id": 1,
+      "name": "هاديشهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 11,
+   "fields": {
+      "province_id": 1,
+      "name": "بناب"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 12,
+   "fields": {
+      "province_id": 1,
+      "name": "كليبر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 13,
+   "fields": {
+      "province_id": 1,
+      "name": "تسوج"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 14,
+   "fields": {
+      "province_id": 1,
+      "name": "اهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 15,
+   "fields": {
+      "province_id": 1,
+      "name": "هريس"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 16,
+   "fields": {
+      "province_id": 1,
+      "name": "عجبشير"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 17,
+   "fields": {
+      "province_id": 1,
+      "name": "هشترود"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 18,
+   "fields": {
+      "province_id": 1,
+      "name": "ملكان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 19,
+   "fields": {
+      "province_id": 1,
+      "name": "بستان آباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 20,
+   "fields": {
+      "province_id": 1,
+      "name": "ورزقان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 21,
+   "fields": {
+      "province_id": 1,
+      "name": "اسكو"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 22,
+   "fields": {
+      "province_id": 1,
+      "name": "آذر شهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 23,
+   "fields": {
+      "province_id": 1,
+      "name": "قره آغاج"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 24,
+   "fields": {
+      "province_id": 1,
+      "name": "ممقان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 25,
+   "fields": {
+      "province_id": 1,
+      "name": "صوفیان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 26,
+   "fields": {
+      "province_id": 1,
+      "name": "ایلخچی"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 27,
+   "fields": {
+      "province_id": 1,
+      "name": "خسروشهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 28,
+   "fields": {
+      "province_id": 1,
+      "name": "باسمنج"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 29,
+   "fields": {
+      "province_id": 1,
+      "name": "سهند"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 30,
+   "fields": {
+      "province_id": 2,
+      "name": "اروميه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 31,
+   "fields": {
+      "province_id": 2,
+      "name": "نقده"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 32,
+   "fields": {
+      "province_id": 2,
+      "name": "ماكو"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 33,
+   "fields": {
+      "province_id": 2,
+      "name": "تكاب"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 34,
+   "fields": {
+      "province_id": 2,
+      "name": "خوي"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 35,
+   "fields": {
+      "province_id": 2,
+      "name": "مهاباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 36,
+   "fields": {
+      "province_id": 2,
+      "name": "سر دشت"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 37,
+   "fields": {
+      "province_id": 2,
+      "name": "چالدران"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 38,
+   "fields": {
+      "province_id": 2,
+      "name": "بوكان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 39,
+   "fields": {
+      "province_id": 2,
+      "name": "مياندوآب"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 40,
+   "fields": {
+      "province_id": 2,
+      "name": "سلماس"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 41,
+   "fields": {
+      "province_id": 2,
+      "name": "شاهين دژ"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 42,
+   "fields": {
+      "province_id": 2,
+      "name": "پيرانشهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 43,
+   "fields": {
+      "province_id": 2,
+      "name": "سيه چشمه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 44,
+   "fields": {
+      "province_id": 2,
+      "name": "اشنويه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 45,
+   "fields": {
+      "province_id": 2,
+      "name": "چایپاره"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 46,
+   "fields": {
+      "province_id": 2,
+      "name": "پلدشت"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 47,
+   "fields": {
+      "province_id": 2,
+      "name": "شوط"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 48,
+   "fields": {
+      "province_id": 3,
+      "name": "اردبيل"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 49,
+   "fields": {
+      "province_id": 3,
+      "name": "سرعين"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 50,
+   "fields": {
+      "province_id": 3,
+      "name": "بيله سوار"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 51,
+   "fields": {
+      "province_id": 3,
+      "name": "پارس آباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 52,
+   "fields": {
+      "province_id": 3,
+      "name": "خلخال"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 53,
+   "fields": {
+      "province_id": 3,
+      "name": "مشگين شهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 54,
+   "fields": {
+      "province_id": 3,
+      "name": "مغان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 55,
+   "fields": {
+      "province_id": 3,
+      "name": "نمين"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 56,
+   "fields": {
+      "province_id": 3,
+      "name": "نير"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 57,
+   "fields": {
+      "province_id": 3,
+      "name": "كوثر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 58,
+   "fields": {
+      "province_id": 3,
+      "name": "كيوي"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 59,
+   "fields": {
+      "province_id": 3,
+      "name": "گرمي"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 60,
+   "fields": {
+      "province_id": 4,
+      "name": "اصفهان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 61,
+   "fields": {
+      "province_id": 4,
+      "name": "فريدن"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 62,
+   "fields": {
+      "province_id": 4,
+      "name": "فريدون شهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 63,
+   "fields": {
+      "province_id": 4,
+      "name": "فلاورجان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 64,
+   "fields": {
+      "province_id": 4,
+      "name": "گلپايگان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 65,
+   "fields": {
+      "province_id": 4,
+      "name": "دهاقان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 66,
+   "fields": {
+      "province_id": 4,
+      "name": "نطنز"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 67,
+   "fields": {
+      "province_id": 4,
+      "name": "نايين"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 68,
+   "fields": {
+      "province_id": 4,
+      "name": "تيران"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 69,
+   "fields": {
+      "province_id": 4,
+      "name": "كاشان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 70,
+   "fields": {
+      "province_id": 4,
+      "name": "فولاد شهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 71,
+   "fields": {
+      "province_id": 4,
+      "name": "اردستان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 72,
+   "fields": {
+      "province_id": 4,
+      "name": "سميرم"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 73,
+   "fields": {
+      "province_id": 4,
+      "name": "درچه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 74,
+   "fields": {
+      "province_id": 4,
+      "name": "کوهپایه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 75,
+   "fields": {
+      "province_id": 4,
+      "name": "مباركه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 76,
+   "fields": {
+      "province_id": 4,
+      "name": "شهرضا"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 77,
+   "fields": {
+      "province_id": 4,
+      "name": "خميني شهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 78,
+   "fields": {
+      "province_id": 4,
+      "name": "شاهين شهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 79,
+   "fields": {
+      "province_id": 4,
+      "name": "نجف آباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 80,
+   "fields": {
+      "province_id": 4,
+      "name": "دولت آباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 81,
+   "fields": {
+      "province_id": 4,
+      "name": "زرين شهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 82,
+   "fields": {
+      "province_id": 4,
+      "name": "آران و بيدگل"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 83,
+   "fields": {
+      "province_id": 4,
+      "name": "باغ بهادران"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 84,
+   "fields": {
+      "province_id": 4,
+      "name": "خوانسار"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 85,
+   "fields": {
+      "province_id": 4,
+      "name": "مهردشت"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 86,
+   "fields": {
+      "province_id": 4,
+      "name": "علويجه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 87,
+   "fields": {
+      "province_id": 4,
+      "name": "عسگران"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 88,
+   "fields": {
+      "province_id": 4,
+      "name": "نهضت آباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 89,
+   "fields": {
+      "province_id": 4,
+      "name": "حاجي آباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 90,
+   "fields": {
+      "province_id": 4,
+      "name": "تودشک"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 91,
+   "fields": {
+      "province_id": 4,
+      "name": "ورزنه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 92,
+   "fields": {
+      "province_id": 6,
+      "name": "ايلام"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 93,
+   "fields": {
+      "province_id": 6,
+      "name": "مهران"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 94,
+   "fields": {
+      "province_id": 6,
+      "name": "دهلران"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 95,
+   "fields": {
+      "province_id": 6,
+      "name": "آبدانان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 96,
+   "fields": {
+      "province_id": 6,
+      "name": "شيروان چرداول"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 97,
+   "fields": {
+      "province_id": 6,
+      "name": "دره شهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 98,
+   "fields": {
+      "province_id": 6,
+      "name": "ايوان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 99,
+   "fields": {
+      "province_id": 6,
+      "name": "سرابله"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 100,
+   "fields": {
+      "province_id": 7,
+      "name": "بوشهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 101,
+   "fields": {
+      "province_id": 7,
+      "name": "تنگستان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 102,
+   "fields": {
+      "province_id": 7,
+      "name": "دشتستان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 103,
+   "fields": {
+      "province_id": 7,
+      "name": "دير"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 104,
+   "fields": {
+      "province_id": 7,
+      "name": "ديلم"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 105,
+   "fields": {
+      "province_id": 7,
+      "name": "كنگان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 106,
+   "fields": {
+      "province_id": 7,
+      "name": "گناوه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 107,
+   "fields": {
+      "province_id": 7,
+      "name": "ريشهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 108,
+   "fields": {
+      "province_id": 7,
+      "name": "دشتي"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 109,
+   "fields": {
+      "province_id": 7,
+      "name": "خورموج"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 110,
+   "fields": {
+      "province_id": 7,
+      "name": "اهرم"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 111,
+   "fields": {
+      "province_id": 7,
+      "name": "برازجان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 112,
+   "fields": {
+      "province_id": 7,
+      "name": "خارك"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 113,
+   "fields": {
+      "province_id": 7,
+      "name": "جم"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 114,
+   "fields": {
+      "province_id": 7,
+      "name": "کاکی"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 115,
+   "fields": {
+      "province_id": 7,
+      "name": "عسلویه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 116,
+   "fields": {
+      "province_id": 7,
+      "name": "بردخون"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 117,
+   "fields": {
+      "province_id": 8,
+      "name": "تهران"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 118,
+   "fields": {
+      "province_id": 8,
+      "name": "ورامين"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 119,
+   "fields": {
+      "province_id": 8,
+      "name": "فيروزكوه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 120,
+   "fields": {
+      "province_id": 8,
+      "name": "ري"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 121,
+   "fields": {
+      "province_id": 8,
+      "name": "دماوند"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 122,
+   "fields": {
+      "province_id": 8,
+      "name": "اسلامشهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 123,
+   "fields": {
+      "province_id": 8,
+      "name": "رودهن"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 124,
+   "fields": {
+      "province_id": 8,
+      "name": "لواسان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 125,
+   "fields": {
+      "province_id": 8,
+      "name": "بومهن"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 126,
+   "fields": {
+      "province_id": 8,
+      "name": "تجريش"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 127,
+   "fields": {
+      "province_id": 8,
+      "name": "فشم"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 128,
+   "fields": {
+      "province_id": 8,
+      "name": "كهريزك"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 129,
+   "fields": {
+      "province_id": 8,
+      "name": "پاكدشت"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 130,
+   "fields": {
+      "province_id": 8,
+      "name": "چهاردانگه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 131,
+   "fields": {
+      "province_id": 8,
+      "name": "شريف آباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 132,
+   "fields": {
+      "province_id": 8,
+      "name": "قرچك"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 133,
+   "fields": {
+      "province_id": 8,
+      "name": "باقرشهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 134,
+   "fields": {
+      "province_id": 8,
+      "name": "شهريار"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 135,
+   "fields": {
+      "province_id": 8,
+      "name": "رباط كريم"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 136,
+   "fields": {
+      "province_id": 8,
+      "name": "قدس"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 137,
+   "fields": {
+      "province_id": 8,
+      "name": "ملارد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 138,
+   "fields": {
+      "province_id": 9,
+      "name": "شهركرد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 139,
+   "fields": {
+      "province_id": 9,
+      "name": "فارسان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 140,
+   "fields": {
+      "province_id": 9,
+      "name": "بروجن"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 141,
+   "fields": {
+      "province_id": 9,
+      "name": "چلگرد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 142,
+   "fields": {
+      "province_id": 9,
+      "name": "اردل"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 143,
+   "fields": {
+      "province_id": 9,
+      "name": "لردگان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 144,
+   "fields": {
+      "province_id": 9,
+      "name": "سامان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 145,
+   "fields": {
+      "province_id": 10,
+      "name": "قائن"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 146,
+   "fields": {
+      "province_id": 10,
+      "name": "فردوس"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 147,
+   "fields": {
+      "province_id": 10,
+      "name": "بيرجند"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 148,
+   "fields": {
+      "province_id": 10,
+      "name": "نهبندان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 149,
+   "fields": {
+      "province_id": 10,
+      "name": "سربيشه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 150,
+   "fields": {
+      "province_id": 10,
+      "name": "طبس مسینا"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 151,
+   "fields": {
+      "province_id": 10,
+      "name": "قهستان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 152,
+   "fields": {
+      "province_id": 10,
+      "name": "درمیان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 153,
+   "fields": {
+      "province_id": 11,
+      "name": "مشهد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 154,
+   "fields": {
+      "province_id": 11,
+      "name": "نيشابور"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 155,
+   "fields": {
+      "province_id": 11,
+      "name": "سبزوار"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 156,
+   "fields": {
+      "province_id": 11,
+      "name": "كاشمر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 157,
+   "fields": {
+      "province_id": 11,
+      "name": "گناباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 158,
+   "fields": {
+      "province_id": 11,
+      "name": "طبس"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 159,
+   "fields": {
+      "province_id": 11,
+      "name": "تربت حيدريه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 160,
+   "fields": {
+      "province_id": 11,
+      "name": "خواف"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 161,
+   "fields": {
+      "province_id": 11,
+      "name": "تربت جام"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 162,
+   "fields": {
+      "province_id": 11,
+      "name": "تايباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 163,
+   "fields": {
+      "province_id": 11,
+      "name": "قوچان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 164,
+   "fields": {
+      "province_id": 11,
+      "name": "سرخس"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 165,
+   "fields": {
+      "province_id": 11,
+      "name": "بردسكن"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 166,
+   "fields": {
+      "province_id": 11,
+      "name": "فريمان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 167,
+   "fields": {
+      "province_id": 11,
+      "name": "چناران"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 168,
+   "fields": {
+      "province_id": 11,
+      "name": "درگز"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 169,
+   "fields": {
+      "province_id": 11,
+      "name": "كلات"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 170,
+   "fields": {
+      "province_id": 11,
+      "name": "طرقبه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 171,
+   "fields": {
+      "province_id": 11,
+      "name": "سر ولایت"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 172,
+   "fields": {
+      "province_id": 12,
+      "name": "بجنورد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 173,
+   "fields": {
+      "province_id": 12,
+      "name": "اسفراين"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 174,
+   "fields": {
+      "province_id": 12,
+      "name": "جاجرم"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 175,
+   "fields": {
+      "province_id": 12,
+      "name": "شيروان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 176,
+   "fields": {
+      "province_id": 12,
+      "name": "آشخانه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 177,
+   "fields": {
+      "province_id": 12,
+      "name": "گرمه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 178,
+   "fields": {
+      "province_id": 12,
+      "name": "ساروج"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 179,
+   "fields": {
+      "province_id": 13,
+      "name": "اهواز"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 180,
+   "fields": {
+      "province_id": 13,
+      "name": "ايرانشهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 181,
+   "fields": {
+      "province_id": 13,
+      "name": "شوش"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 182,
+   "fields": {
+      "province_id": 13,
+      "name": "آبادان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 183,
+   "fields": {
+      "province_id": 13,
+      "name": "خرمشهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 184,
+   "fields": {
+      "province_id": 13,
+      "name": "مسجد سليمان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 185,
+   "fields": {
+      "province_id": 13,
+      "name": "ايذه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 186,
+   "fields": {
+      "province_id": 13,
+      "name": "شوشتر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 187,
+   "fields": {
+      "province_id": 13,
+      "name": "انديمشك"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 188,
+   "fields": {
+      "province_id": 13,
+      "name": "سوسنگرد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 189,
+   "fields": {
+      "province_id": 13,
+      "name": "هويزه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 190,
+   "fields": {
+      "province_id": 13,
+      "name": "دزفول"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 191,
+   "fields": {
+      "province_id": 13,
+      "name": "شادگان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 192,
+   "fields": {
+      "province_id": 13,
+      "name": "بندر ماهشهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 193,
+   "fields": {
+      "province_id": 13,
+      "name": "بندر امام خميني"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 194,
+   "fields": {
+      "province_id": 13,
+      "name": "اميديه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 195,
+   "fields": {
+      "province_id": 13,
+      "name": "بهبهان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 196,
+   "fields": {
+      "province_id": 13,
+      "name": "رامهرمز"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 197,
+   "fields": {
+      "province_id": 13,
+      "name": "باغ ملك"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 198,
+   "fields": {
+      "province_id": 13,
+      "name": "هنديجان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 199,
+   "fields": {
+      "province_id": 13,
+      "name": "لالي"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 200,
+   "fields": {
+      "province_id": 13,
+      "name": "رامشیر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 201,
+   "fields": {
+      "province_id": 13,
+      "name": "حمیدیه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 202,
+   "fields": {
+      "province_id": 13,
+      "name": "دغاغله"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 203,
+   "fields": {
+      "province_id": 13,
+      "name": "ملاثانی"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 204,
+   "fields": {
+      "province_id": 13,
+      "name": "شادگان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 205,
+   "fields": {
+      "province_id": 13,
+      "name": "ویسی"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 206,
+   "fields": {
+      "province_id": 14,
+      "name": "زنجان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 207,
+   "fields": {
+      "province_id": 14,
+      "name": "ابهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 208,
+   "fields": {
+      "province_id": 14,
+      "name": "خدابنده"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 209,
+   "fields": {
+      "province_id": 14,
+      "name": "كارم"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 210,
+   "fields": {
+      "province_id": 14,
+      "name": "ماهنشان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 211,
+   "fields": {
+      "province_id": 14,
+      "name": "خرمدره"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 212,
+   "fields": {
+      "province_id": 14,
+      "name": "ايجرود"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 213,
+   "fields": {
+      "province_id": 14,
+      "name": "زرين آباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 214,
+   "fields": {
+      "province_id": 14,
+      "name": "آب بر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 215,
+   "fields": {
+      "province_id": 14,
+      "name": "قيدار"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 216,
+   "fields": {
+      "province_id": 15,
+      "name": "سمنان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 217,
+   "fields": {
+      "province_id": 15,
+      "name": "شاهرود"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 218,
+   "fields": {
+      "province_id": 15,
+      "name": "گرمسار"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 219,
+   "fields": {
+      "province_id": 15,
+      "name": "ايوانكي"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 220,
+   "fields": {
+      "province_id": 15,
+      "name": "دامغان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 221,
+   "fields": {
+      "province_id": 15,
+      "name": "بسطام"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 222,
+   "fields": {
+      "province_id": 16,
+      "name": "زاهدان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 223,
+   "fields": {
+      "province_id": 16,
+      "name": "چابهار"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 224,
+   "fields": {
+      "province_id": 16,
+      "name": "خاش"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 225,
+   "fields": {
+      "province_id": 16,
+      "name": "سراوان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 226,
+   "fields": {
+      "province_id": 16,
+      "name": "زابل"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 227,
+   "fields": {
+      "province_id": 16,
+      "name": "سرباز"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 228,
+   "fields": {
+      "province_id": 16,
+      "name": "نيكشهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 229,
+   "fields": {
+      "province_id": 16,
+      "name": "ايرانشهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 230,
+   "fields": {
+      "province_id": 16,
+      "name": "راسك"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 231,
+   "fields": {
+      "province_id": 16,
+      "name": "ميرجاوه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 232,
+   "fields": {
+      "province_id": 17,
+      "name": "شيراز"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 233,
+   "fields": {
+      "province_id": 17,
+      "name": "اقليد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 234,
+   "fields": {
+      "province_id": 17,
+      "name": "داراب"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 235,
+   "fields": {
+      "province_id": 17,
+      "name": "فسا"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 236,
+   "fields": {
+      "province_id": 17,
+      "name": "مرودشت"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 237,
+   "fields": {
+      "province_id": 17,
+      "name": "خرم بيد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 238,
+   "fields": {
+      "province_id": 17,
+      "name": "آباده"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 239,
+   "fields": {
+      "province_id": 17,
+      "name": "كازرون"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 240,
+   "fields": {
+      "province_id": 17,
+      "name": "ممسني"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 241,
+   "fields": {
+      "province_id": 17,
+      "name": "سپيدان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 242,
+   "fields": {
+      "province_id": 17,
+      "name": "لار"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 243,
+   "fields": {
+      "province_id": 17,
+      "name": "فيروز آباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 244,
+   "fields": {
+      "province_id": 17,
+      "name": "جهرم"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 245,
+   "fields": {
+      "province_id": 17,
+      "name": "ني ريز"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 246,
+   "fields": {
+      "province_id": 17,
+      "name": "استهبان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 247,
+   "fields": {
+      "province_id": 17,
+      "name": "لامرد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 248,
+   "fields": {
+      "province_id": 17,
+      "name": "مهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 249,
+   "fields": {
+      "province_id": 17,
+      "name": "حاجي آباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 250,
+   "fields": {
+      "province_id": 17,
+      "name": "نورآباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 251,
+   "fields": {
+      "province_id": 17,
+      "name": "اردكان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 252,
+   "fields": {
+      "province_id": 17,
+      "name": "صفاشهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 253,
+   "fields": {
+      "province_id": 17,
+      "name": "ارسنجان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 254,
+   "fields": {
+      "province_id": 17,
+      "name": "قيروكارزين"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 255,
+   "fields": {
+      "province_id": 17,
+      "name": "سوريان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 256,
+   "fields": {
+      "province_id": 17,
+      "name": "فراشبند"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 257,
+   "fields": {
+      "province_id": 17,
+      "name": "سروستان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 258,
+   "fields": {
+      "province_id": 17,
+      "name": "ارژن"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 259,
+   "fields": {
+      "province_id": 17,
+      "name": "گويم"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 260,
+   "fields": {
+      "province_id": 17,
+      "name": "داريون"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 261,
+   "fields": {
+      "province_id": 17,
+      "name": "زرقان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 262,
+   "fields": {
+      "province_id": 17,
+      "name": "خان زنیان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 263,
+   "fields": {
+      "province_id": 17,
+      "name": "کوار"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 264,
+   "fields": {
+      "province_id": 17,
+      "name": "ده بید"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 265,
+   "fields": {
+      "province_id": 17,
+      "name": "باب انار/خفر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 266,
+   "fields": {
+      "province_id": 17,
+      "name": "بوانات"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 267,
+   "fields": {
+      "province_id": 17,
+      "name": "خرامه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 268,
+   "fields": {
+      "province_id": 17,
+      "name": "خنج"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 269,
+   "fields": {
+      "province_id": 17,
+      "name": "سیاخ دارنگون"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 270,
+   "fields": {
+      "province_id": 18,
+      "name": "قزوين"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 271,
+   "fields": {
+      "province_id": 18,
+      "name": "تاكستان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 272,
+   "fields": {
+      "province_id": 18,
+      "name": "آبيك"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 273,
+   "fields": {
+      "province_id": 18,
+      "name": "بوئين زهرا"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 274,
+   "fields": {
+      "province_id": 19,
+      "name": "قم"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 275,
+   "fields": {
+      "province_id": 5,
+      "name": "طالقان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 276,
+   "fields": {
+      "province_id": 5,
+      "name": "نظرآباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 277,
+   "fields": {
+      "province_id": 5,
+      "name": "اشتهارد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 278,
+   "fields": {
+      "province_id": 5,
+      "name": "هشتگرد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 279,
+   "fields": {
+      "province_id": 5,
+      "name": "كن"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 280,
+   "fields": {
+      "province_id": 5,
+      "name": "آسارا"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 281,
+   "fields": {
+      "province_id": 5,
+      "name": "شهرک گلستان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 282,
+   "fields": {
+      "province_id": 5,
+      "name": "اندیشه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 283,
+   "fields": {
+      "province_id": 5,
+      "name": "كرج"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 284,
+   "fields": {
+      "province_id": 5,
+      "name": "نظر آباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 285,
+   "fields": {
+      "province_id": 5,
+      "name": "گوهردشت"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 286,
+   "fields": {
+      "province_id": 5,
+      "name": "ماهدشت"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 287,
+   "fields": {
+      "province_id": 5,
+      "name": "مشکین دشت"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 288,
+   "fields": {
+      "province_id": 20,
+      "name": "سنندج"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 289,
+   "fields": {
+      "province_id": 20,
+      "name": "ديواندره"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 290,
+   "fields": {
+      "province_id": 20,
+      "name": "بانه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 291,
+   "fields": {
+      "province_id": 20,
+      "name": "بيجار"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 292,
+   "fields": {
+      "province_id": 20,
+      "name": "سقز"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 293,
+   "fields": {
+      "province_id": 20,
+      "name": "كامياران"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 294,
+   "fields": {
+      "province_id": 20,
+      "name": "قروه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 295,
+   "fields": {
+      "province_id": 20,
+      "name": "مريوان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 296,
+   "fields": {
+      "province_id": 20,
+      "name": "صلوات آباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 297,
+   "fields": {
+      "province_id": 20,
+      "name": "حسن آباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 298,
+   "fields": {
+      "province_id": 21,
+      "name": "كرمان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 299,
+   "fields": {
+      "province_id": 21,
+      "name": "راور"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 300,
+   "fields": {
+      "province_id": 21,
+      "name": "بابك"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 301,
+   "fields": {
+      "province_id": 21,
+      "name": "انار"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 302,
+   "fields": {
+      "province_id": 21,
+      "name": "کوهبنان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 303,
+   "fields": {
+      "province_id": 21,
+      "name": "رفسنجان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 304,
+   "fields": {
+      "province_id": 21,
+      "name": "بافت"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 305,
+   "fields": {
+      "province_id": 21,
+      "name": "سيرجان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 306,
+   "fields": {
+      "province_id": 21,
+      "name": "كهنوج"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 307,
+   "fields": {
+      "province_id": 21,
+      "name": "زرند"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 308,
+   "fields": {
+      "province_id": 21,
+      "name": "بم"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 309,
+   "fields": {
+      "province_id": 21,
+      "name": "جيرفت"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 310,
+   "fields": {
+      "province_id": 21,
+      "name": "بردسير"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 311,
+   "fields": {
+      "province_id": 22,
+      "name": "كرمانشاه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 312,
+   "fields": {
+      "province_id": 22,
+      "name": "اسلام آباد غرب"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 313,
+   "fields": {
+      "province_id": 22,
+      "name": "سر پل ذهاب"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 314,
+   "fields": {
+      "province_id": 22,
+      "name": "كنگاور"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 315,
+   "fields": {
+      "province_id": 22,
+      "name": "سنقر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 316,
+   "fields": {
+      "province_id": 22,
+      "name": "قصر شيرين"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 317,
+   "fields": {
+      "province_id": 22,
+      "name": "گيلان غرب"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 318,
+   "fields": {
+      "province_id": 22,
+      "name": "هرسين"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 319,
+   "fields": {
+      "province_id": 22,
+      "name": "صحنه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 320,
+   "fields": {
+      "province_id": 22,
+      "name": "پاوه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 321,
+   "fields": {
+      "province_id": 22,
+      "name": "جوانرود"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 322,
+   "fields": {
+      "province_id": 22,
+      "name": "شاهو"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 323,
+   "fields": {
+      "province_id": 23,
+      "name": "ياسوج"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 324,
+   "fields": {
+      "province_id": 23,
+      "name": "گچساران"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 325,
+   "fields": {
+      "province_id": 23,
+      "name": "دنا"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 326,
+   "fields": {
+      "province_id": 23,
+      "name": "دوگنبدان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 327,
+   "fields": {
+      "province_id": 23,
+      "name": "سي سخت"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 328,
+   "fields": {
+      "province_id": 23,
+      "name": "دهدشت"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 329,
+   "fields": {
+      "province_id": 23,
+      "name": "ليكك"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 330,
+   "fields": {
+      "province_id": 24,
+      "name": "گرگان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 331,
+   "fields": {
+      "province_id": 24,
+      "name": "آق قلا"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 332,
+   "fields": {
+      "province_id": 24,
+      "name": "گنبد كاووس"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 333,
+   "fields": {
+      "province_id": 24,
+      "name": "علي آباد كتول"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 334,
+   "fields": {
+      "province_id": 24,
+      "name": "مينو دشت"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 335,
+   "fields": {
+      "province_id": 24,
+      "name": "تركمن"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 336,
+   "fields": {
+      "province_id": 24,
+      "name": "كردكوي"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 337,
+   "fields": {
+      "province_id": 24,
+      "name": "بندر گز"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 338,
+   "fields": {
+      "province_id": 24,
+      "name": "كلاله"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 339,
+   "fields": {
+      "province_id": 24,
+      "name": "آزاد شهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 340,
+   "fields": {
+      "province_id": 24,
+      "name": "راميان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 341,
+   "fields": {
+      "province_id": 25,
+      "name": "رشت"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 342,
+   "fields": {
+      "province_id": 25,
+      "name": "منجيل"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 343,
+   "fields": {
+      "province_id": 25,
+      "name": "لنگرود"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 344,
+   "fields": {
+      "province_id": 25,
+      "name": "رود سر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 345,
+   "fields": {
+      "province_id": 25,
+      "name": "تالش"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 346,
+   "fields": {
+      "province_id": 25,
+      "name": "آستارا"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 347,
+   "fields": {
+      "province_id": 25,
+      "name": "ماسوله"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 348,
+   "fields": {
+      "province_id": 25,
+      "name": "آستانه اشرفيه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 349,
+   "fields": {
+      "province_id": 25,
+      "name": "رودبار"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 350,
+   "fields": {
+      "province_id": 25,
+      "name": "فومن"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 351,
+   "fields": {
+      "province_id": 25,
+      "name": "صومعه سرا"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 352,
+   "fields": {
+      "province_id": 25,
+      "name": "بندرانزلي"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 353,
+   "fields": {
+      "province_id": 25,
+      "name": "كلاچاي"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 354,
+   "fields": {
+      "province_id": 25,
+      "name": "هشتپر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 355,
+   "fields": {
+      "province_id": 25,
+      "name": "رضوان شهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 356,
+   "fields": {
+      "province_id": 25,
+      "name": "ماسال"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 357,
+   "fields": {
+      "province_id": 25,
+      "name": "شفت"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 358,
+   "fields": {
+      "province_id": 25,
+      "name": "سياهكل"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 359,
+   "fields": {
+      "province_id": 25,
+      "name": "املش"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 360,
+   "fields": {
+      "province_id": 25,
+      "name": "لاهیجان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 361,
+   "fields": {
+      "province_id": 25,
+      "name": "خشک بيجار"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 362,
+   "fields": {
+      "province_id": 25,
+      "name": "خمام"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 363,
+   "fields": {
+      "province_id": 25,
+      "name": "لشت نشا"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 364,
+   "fields": {
+      "province_id": 25,
+      "name": "بندر کياشهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 365,
+   "fields": {
+      "province_id": 26,
+      "name": "خرم آباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 366,
+   "fields": {
+      "province_id": 26,
+      "name": "ماهشهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 367,
+   "fields": {
+      "province_id": 26,
+      "name": "دزفول"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 368,
+   "fields": {
+      "province_id": 26,
+      "name": "بروجرد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 369,
+   "fields": {
+      "province_id": 26,
+      "name": "دورود"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 370,
+   "fields": {
+      "province_id": 26,
+      "name": "اليگودرز"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 371,
+   "fields": {
+      "province_id": 26,
+      "name": "ازنا"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 372,
+   "fields": {
+      "province_id": 26,
+      "name": "نور آباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 373,
+   "fields": {
+      "province_id": 26,
+      "name": "كوهدشت"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 374,
+   "fields": {
+      "province_id": 26,
+      "name": "الشتر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 375,
+   "fields": {
+      "province_id": 26,
+      "name": "پلدختر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 376,
+   "fields": {
+      "province_id": 27,
+      "name": "ساري"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 377,
+   "fields": {
+      "province_id": 27,
+      "name": "آمل"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 378,
+   "fields": {
+      "province_id": 27,
+      "name": "بابل"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 379,
+   "fields": {
+      "province_id": 27,
+      "name": "بابلسر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 380,
+   "fields": {
+      "province_id": 27,
+      "name": "بهشهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 381,
+   "fields": {
+      "province_id": 27,
+      "name": "تنكابن"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 382,
+   "fields": {
+      "province_id": 27,
+      "name": "جويبار"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 383,
+   "fields": {
+      "province_id": 27,
+      "name": "چالوس"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 384,
+   "fields": {
+      "province_id": 27,
+      "name": "رامسر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 385,
+   "fields": {
+      "province_id": 27,
+      "name": "سواد كوه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 386,
+   "fields": {
+      "province_id": 27,
+      "name": "قائم شهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 387,
+   "fields": {
+      "province_id": 27,
+      "name": "نكا"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 388,
+   "fields": {
+      "province_id": 27,
+      "name": "نور"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 389,
+   "fields": {
+      "province_id": 27,
+      "name": "بلده"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 390,
+   "fields": {
+      "province_id": 27,
+      "name": "نوشهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 391,
+   "fields": {
+      "province_id": 27,
+      "name": "پل سفيد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 392,
+   "fields": {
+      "province_id": 27,
+      "name": "محمود آباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 393,
+   "fields": {
+      "province_id": 27,
+      "name": "فريدون كنار"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 394,
+   "fields": {
+      "province_id": 28,
+      "name": "اراك"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 395,
+   "fields": {
+      "province_id": 28,
+      "name": "آشتيان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 396,
+   "fields": {
+      "province_id": 28,
+      "name": "تفرش"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 397,
+   "fields": {
+      "province_id": 28,
+      "name": "خمين"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 398,
+   "fields": {
+      "province_id": 28,
+      "name": "دليجان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 399,
+   "fields": {
+      "province_id": 28,
+      "name": "ساوه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 400,
+   "fields": {
+      "province_id": 28,
+      "name": "سربند"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 401,
+   "fields": {
+      "province_id": 28,
+      "name": "محلات"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 402,
+   "fields": {
+      "province_id": 28,
+      "name": "شازند"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 403,
+   "fields": {
+      "province_id": 29,
+      "name": "بندرعباس"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 404,
+   "fields": {
+      "province_id": 29,
+      "name": "قشم"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 405,
+   "fields": {
+      "province_id": 29,
+      "name": "كيش"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 406,
+   "fields": {
+      "province_id": 29,
+      "name": "بندر لنگه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 407,
+   "fields": {
+      "province_id": 29,
+      "name": "بستك"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 408,
+   "fields": {
+      "province_id": 29,
+      "name": "حاجي آباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 409,
+   "fields": {
+      "province_id": 29,
+      "name": "دهبارز"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 410,
+   "fields": {
+      "province_id": 29,
+      "name": "انگهران"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 411,
+   "fields": {
+      "province_id": 29,
+      "name": "ميناب"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 412,
+   "fields": {
+      "province_id": 29,
+      "name": "ابوموسي"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 413,
+   "fields": {
+      "province_id": 29,
+      "name": "بندر جاسك"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 414,
+   "fields": {
+      "province_id": 29,
+      "name": "تنب بزرگ"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 415,
+   "fields": {
+      "province_id": 29,
+      "name": "بندر خمیر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 416,
+   "fields": {
+      "province_id": 29,
+      "name": "پارسیان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 417,
+   "fields": {
+      "province_id": 29,
+      "name": "قشم"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 418,
+   "fields": {
+      "province_id": 30,
+      "name": "همدان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 419,
+   "fields": {
+      "province_id": 30,
+      "name": "ملاير"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 420,
+   "fields": {
+      "province_id": 30,
+      "name": "تويسركان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 421,
+   "fields": {
+      "province_id": 30,
+      "name": "نهاوند"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 422,
+   "fields": {
+      "province_id": 30,
+      "name": "كبودر اهنگ"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 423,
+   "fields": {
+      "province_id": 30,
+      "name": "رزن"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 424,
+   "fields": {
+      "province_id": 30,
+      "name": "اسدآباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 425,
+   "fields": {
+      "province_id": 30,
+      "name": "بهار"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 426,
+   "fields": {
+      "province_id": 31,
+      "name": "يزد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 427,
+   "fields": {
+      "province_id": 31,
+      "name": "تفت"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 428,
+   "fields": {
+      "province_id": 31,
+      "name": "اردكان"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 429,
+   "fields": {
+      "province_id": 31,
+      "name": "ابركوه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 430,
+   "fields": {
+      "province_id": 31,
+      "name": "ميبد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 431,
+   "fields": {
+      "province_id": 31,
+      "name": "طبس"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 432,
+   "fields": {
+      "province_id": 31,
+      "name": "بافق"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 433,
+   "fields": {
+      "province_id": 31,
+      "name": "مهريز"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 434,
+   "fields": {
+      "province_id": 31,
+      "name": "اشكذر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 435,
+   "fields": {
+      "province_id": 31,
+      "name": "هرات"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 436,
+   "fields": {
+      "province_id": 31,
+      "name": "خضرآباد"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 437,
+   "fields": {
+      "province_id": 31,
+      "name": "شاهديه"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 438,
+   "fields": {
+      "province_id": 31,
+      "name": "حمیدیه شهر"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 439,
+   "fields": {
+      "province_id": 31,
+      "name": "سید میرزا"
+   }
+},
+{
+   "model": "core.city",
+   "pk": 440,
+   "fields": {
+      "province_id": 31,
+      "name": "زارچ"
+   }
+}
+]

@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    لیست محصولات پیشنهادی
+{% endblock title %}
+{% block content %}
+{# sub_usage or pump_type selct div #}
+    <section>
+        {{ sub_usage_list_with_usage|json_script:"sub_usage_list_with_usage" }}
+        {{ pump_type_list_with_main_model|json_script:"pump_type_list_with_main_model" }}
+        <div class="container my-5 rounded" style="background-color: #99D6D6">
+            <div class="row py-5 align-items-center">
+                <form method="POST" class="row" action="{% url 'solution_product_list' %}">
+                {% csrf_token %}
+                    {#  main select div: usage or model? #}
+{#                    <div class="col-md-3 mx-md-5">#}
+{#                    {{ usage_model_select|json_script:"usage_model_select_val" }}#}
+{#                        <h2 class="h5 nm-text-color fw-bold mb-4">انتخاب بر اساس:</h2>#}
+{#                        <select required aria-label="Select usage or model" id="usage_model_select"#}
+{#                                class="form-select" onchange="set_usage_or_model_dic()" name="usage_model_select">#}
+{#                            <option {% if usage_model_select == "usage" %} selected {% endif %} value="usage">کاربرد</option>#}
+{#                            <option {% if usage_model_select == "model" %} selected {% endif %} value="model">مدل</option>#}
+{#                        </select>#}
+{#                    </div>#}
+                    {#  usage or model select div #}
+{#                    <div class="col-md-3 mx-md-5">#}
+                    {#  usage select div #}
+{#                        <div class="usage visually-hidden" id="usage_div">#}
+{#                        {{ usage_select|json_script:"usage_select_val" }}#}
+{#                            <h2 class="h5 nm-text-color fw-bold mb-4">انتخاب کاربرد:</h2>#}
+{#                            <select required aria-label="Select usage" class="form-select"#}
+{#                                    name="usage_select" onchange="set_sub_usage_list()" id="usage_select_id">#}
+{#                                {% for usage in usage_queryset %}#}
+{#                                    <option {% if usage_select|slugify == usage.id|slugify %} selected {% endif %}#}
+{#                                            value="{{ usage.id|slugify  }}">{{ usage.usage_name_fa }}</option>#}
+{#                                {% endfor %}#}
+{#                            </select>#}
+{#                        </div>#}
+                    {#  model select div #}
+{#                        <div class="model visually-hidden" id="model_div">#}
+{#                            <h2 class="h5 nm-text-color fw-bold mb-4">انتخاب مدل:</h2>#}
+{#                            <select required aria-label="Select model" class="form-select"#}
+{#                                    name="model_select" onchange="set_pump_type_list()" id="model_select_id">#}
+{#                                {% for model in main_model_queryset %}#}
+{#                                    <option {% if model_select|slugify == model.id|slugify %} selected {% endif %}#}
+{#                                            value="{{ model.id|slugify  }}">{{ model.model_name_fa }}</option>#}
+{#                                {% endfor %}#}
+{#                            </select>#}
+{#                        </div>#}
+{#                    </div>#}
+                    {# select sub_usage or pump_type div #}
+{#                    <div class="col-md-3 mx-md-5">#}
+                    {#  sub_usage select div #}
+{#                        <div class="sub_usage visually-hidden" id="sub_usage_div">#}
+{#                            <h2 class="h5 nm-text-color fw-bold mb-4">انتخاب کاربرد جزئی:</h2>#}
+{#                            <select required aria-label="Select sub_usage" class="form-select"#}
+{#                                    name="sub_usage_select" id="sub_usage_select">#}
+{#                                {% for sub_usage in sub_usage_queryset %}#}
+{#                                    <option {% if sub_usage_select|slugify == sub_usage.id|slugify %} selected {% endif %} value="{{ sub_usage.id|slugify }}">{{ sub_usage.sub_usage_name_fa }}</option>#}
+{#                                {% endfor %}#}
+{#                            </select>#}
+{#                        </div>#}
+                    {#  model select div #}
+{#                        <div class="pump-type visually-hidden" id="pump_type_div">#}
+{#                            <h2 class="h5 nm-text-color fw-bold mb-4">انتخاب تیپ:</h2>#}
+{#                            <select aria-label="Select pump_type" class="form-select" name="pump_type_select">#}
+{#                                {% for pump_type in pump_type_queryset %}#}
+{#                                    <option {% if pump_type_Select|slugify == pump_type.id|slugify %} selected {% endif %} value="{{ pump_type.id|slugify }}">{{ pump_type.type_name }}</option>#}
+{#                                {% endfor %}#}
+{#                            </select>#}
+{#                        </div>#}
+{#                    </div>#}
+                    <div class="row mb-3">
+                        <div class="col-md-4 d-flex flex-row align-items-center">
+                            <label for="head_input" class="form-label me-3">هد: (m)</label>
+                            <input type="text" class="form-control" id="head_input" name="head" >
+                        </div>
+                        <div class="col-md-4 d-flex flex-row align-items-center">
+                            <label for="flow_input" class="form-label me-3">دبی: (m<sup>3</sup>/hr)</label>
+                            <input type="text" class="form-control" id="flow_input" name="flow" >
+                        </div>
+                    </div>
+                    <div class="row my-3">
+                            <div class="col-1"></div>
+                            <div class="col-auto ms-auto">
+                                <input type="submit" value="فیلتر محصولات" id="submit" class="btn btn-primary">
+                            </div>
+                            <div class="col-auto">
+                                <a href="{% url 'solution_main' %}" class="btn btn-secondary">شروع دوباره</a>
+                            </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+        <script>
+            let usage_model_select_val = JSON.parse(document.getElementById("usage_model_select_val").textContent);
+            if (usage_model_select_val){
+                set_usage_or_model_dic()
+            }
+            let usage_select_val = JSON.parse(document.getElementById("usage_select_val").textContent);
+            if (usage_select_val){
+                set_sub_usage_list()
+            }
+            function set_usage_or_model_dic() {
+
+                let usage_model_select = document.getElementById("usage_model_select");
+                let usage_model_choice = usage_model_select.value;
+                let usage_div = document.getElementById("usage_div");
+                let model_div = document.getElementById("model_div");
+                let pump_type_div = document.getElementById("pump_type_div");
+                let sub_usage_div = document.getElementById("sub_usage_div");
+                if (usage_model_choice === "usage") {
+                    model_div.classList.add("visually-hidden");
+                    pump_type_div.classList.add("visually-hidden");
+                    sub_usage_div.classList.add("visually-hidden");
+                    usage_div.classList.remove("visually-hidden");
+                } else if (usage_model_choice === "model") {
+                    usage_div.classList.add("visually-hidden");
+                    pump_type_div.classList.add("visually-hidden");
+                    sub_usage_div.classList.add("visually-hidden");
+                    model_div.classList.remove("visually-hidden");
+                }
+            }
+            function set_sub_usage_list() {
+                let usage_select = document.getElementById("usage_select_id");
+                let pump_type_div = document.getElementById("pump_type_div");
+                let sub_usage_div = document.getElementById("sub_usage_div");
+                let usage_choice = usage_select.value;
+                if (usage_choice !== "----") {
+                    pump_type_div.classList.add("visually-hidden");
+                    sub_usage_div.classList.remove("visually-hidden");
+                }
+            }
+            function set_pump_type_list() {
+                let model_select = document.getElementById("model_select_id");
+                let pump_type_div = document.getElementById("pump_type_div");
+                let sub_usage_div = document.getElementById("sub_usage_div");
+                let model_choice = model_select.value;
+                if (model_choice !== "----") {
+                    sub_usage_div.classList.add("visually-hidden");
+                    pump_type_div.classList.remove("visually-hidden");
+                }
+            }
+
+        </script>
+    </section>
+    {# product list section #}
+<section>
+    <div class="container">
+        <div class="row">
+            <table class="table table-bordered table-responsive text-center">
+                <thead>
+                    <tr>
+                        <th>نام الکتروپمپ</th>
+                        <th>مدل</th>
+                        <th>حداکثر هد (m)</th>
+                        <th>حداکثر دبی (m<sup>3</sup>/hr)</th>
+                        <th>مشخصات فنی</th>
+                        <th>درخواست راهنمایی</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for product in product_list %}
+                        <tr>
+                            <td><a href="{% url 'product_detail' product.id %}" target="_blank" class="text-decoration-none">{{ product.pump_name }}</a></td>
+                            <td>{{ product.main_model }}</td>
+                            <td>{{ product.max_head }}</td>
+                            <td>{{ product.max_flow }}</td>
+                            <td><a href="{{ product.pump_technical_datasheet_fa.url }}" target="_blank" class="text-decoration-none ">مشخصات فنی محصول</a></td>
+                            <td><a href="{% url 'contact_us' %}" target="_blank" class="text-decoration-none ">ارتباط با کارشناسان</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+                <div class="pagination-div">
+                    {% if product_list.has_other_pages %}
+                        <ul class="pagination justify-content-center">
+                            {% if product_list.has_previous %}
+                                <li class="page-item"><a class="page-link" href="?page={{ product_list.previous_page_number }}">قبلی </a></li>
+                            {% else %}
+                                <li class="page-item disabled"><a class="page-link" href="#"><span>قبلی</span></a></li>
+                            {% endif %}
+                            {% for i in product_list.paginator.page_range %}
+                                {% if product_list.number == i %}
+                                    <li class="active page-item"><a class="page-link" href="#"><span>{{ i }} <span class="sr-only">(current)</span></span></a></li>
+                                {% else %}
+                                    <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                            {% if product_list.has_next %}
+                                <li class="page-item"><a class="page-link" href="?page={{ product_list.next_page_number }}">بعدی</a></li>
+                            {% else %}
+                                <li class="disabled page-item"><a href="#" class="page-link"><span>بعدی</span></a></li>
+                            {% endif %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+    </div>
+</section>
+{% endblock content %}

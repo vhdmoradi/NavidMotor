@@ -1,0 +1,48 @@
+{% load static %}
+<div class="bg-overlay " onclick="hideSidebar()" style="z-index: 10">
+  <nav class="side-navbar navbar-expand d-flex flex-column " id="sidebar">
+    <div class="usage-section" id="nav_accordion">
+      <div class="header-box d-flex justify-content-between mt-3 ms-3">
+        <a href="{% url 'products_usage_main' %}"
+          class="nm-text-color fw-semibold d-block p-2 w-100 fs-5 header_selector main-anchor">دسته‌بندی بر اساس
+          کاربرد</a>
+      </div>
+      <ul class="navbar-nav list-unstyled d-flex flex-column mt-5 w-100">
+        {% for usage_item in usage_queryset %}
+        <li class="nav-item p-2 ms-2">
+          <a href="#" class="text-decoration-none nm-text-color fw-semibold" data-bs-toggle="collapse"
+            data-bs-target="#usage_{{ usage_item.id }}">
+            <i class="fa-solid fa-angle-left me-2 icon-selector"></i>
+            الکتروپمپ‌های {{ usage_item.usage_name_fa }}
+          </a>
+          <ul class="submenu collapse" id="usage_{{ usage_item.id }}" data-bs-parent="#nav_accordion">
+            <li class="my-2 ms-2">
+              <a href="{% url 'products_single_usage_list' usage_item.id %}" class="text-decoration-none nm-text-color">
+                <i class="bi bi-check-circle-fill" style="font-size: 0.75rem"></i>
+                همه‌ی الکتروپمپ‌های {{ usage_item.usage_name_fa }}
+              </a>
+            </li>
+            {% for sub_usage in sub_usage_queryset %} {% if sub_usage.usage == usage_item %}
+            <li class="my-2 ms-2">
+              <a href="{% url 'products_sub_usage_list' sub_usage.id %}" class="text-decoration-none nm-text-color">
+                <i class="bi bi-check-circle-fill" style="font-size: 0.75rem"></i>
+                کاربرد {{ sub_usage }}
+              </a>
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+</div>
+  <br>
+  <br>
+  <section class="p-4 my-container">
+    <button class="btn my-4 menu" onclick="showSidebar()">
+      <i class="fa-solid fa-bars fs-2" id="menu_btn"></i>
+    </button>
+  </section>
+<script src="{% static 'js/main.js' %}"></script>

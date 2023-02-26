@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    لیست محصولات {{ usage_title_fa }}
+{% endblock title %}
+
+{% block content %}
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 col-lg-4 px-0">
+                    {% include "products/products_sidebar.html" %}
+                </div>
+                <div class="col-6 col-lg-8 mt-5 pe-5">
+                    <div class="head-title">
+                        <h1 class="fs-5 nm-text-color fw-bolder">الکتروپمپ‌های {{ usage_title_fa }}</h1>
+                    </div>
+                    <div class="usage-description me-5">
+                        <p class="text-justified nm-text-color lh-lg me-5">
+                            در زیر لیست الکتروپمپ‌های کاربرد {{ usage_title_fa }} را مشاهده می‌کنید.
+                            جهت مشاهده لیست محصولات با کاربرد خاص، گزینه مورد نظر را از منوی سمت راست انتخاب نمایید.
+                            <br>
+                            همچنین می‌توانید با وارد کردن هد و دبی مورد نظر خود، محصولاتی را مشاهده نمایید که در محدوده
+                            نیاز شما قرار دارند.
+                            برای کسب اطلاعات بیشتر درباره نحوه انتخاب هد و دبی متناسب با کاربرد مورد نظرتان، اینجا کلیک
+                            کنید.
+                            برای کسب اطلاعات بیشتر درباره کلیات الکتروپمپ‌ها نیز اینجا کلیک کنید.
+                        </p>
+                    </div>
+                    {% include "products/product_list.html" %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

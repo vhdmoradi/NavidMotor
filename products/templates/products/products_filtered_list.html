@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    فیلتر محصولات
+{% endblock title %}
+
+{% block content %}
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 col-lg-4 px-0">
+                    {% include "products/products_sidebar.html" %}
+                </div>
+                <div class="col-6 col-lg-8 mt-5 pe-5">
+                    <div class="head-title">
+                        <h1 class="fs-5 nm-text-color fw-bolder">الکتروپمپ‌های در محدود هد و دبی انتخابی</h1>
+                    </div>
+                    <div class="usage-description me-5">
+                        <p class="text-justified nm-text-color lh-lg me-5">
+                            نتیجه جستجوی هد و دبی مورد نظر شما به شرح زیر می‌باشد.
+                            <br>
+                             برای کسب اطلاعات بیشتر درباره نحوه انتخاب هد و دبی متناسب با کاربرد مورد نظرتان، اینجا کلیک
+                            کنید.
+                            برای کسب اطلاعات بیشتر درباره کلیات الکتروپمپ‌ها نیز اینجا کلیک کنید.
+                        </p>
+                    </div>
+                    {% include "products/product_list.html" %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

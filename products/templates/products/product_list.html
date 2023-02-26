@@ -1,0 +1,66 @@
+{% load static %}
+<div class="product-list me-5">
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="row mb-3">
+            <div class="col-md-3 d-flex flex-row align-items-center">
+                <label for="head_input" class="form-label me-3">هد: (m)</label>
+                <input type="text" class="form-control" id="head_input" name="head" required>
+            </div>
+            <div class="col-md-3 d-flex flex-row align-items-center">
+                <label for="flow_input" class="form-label me-3">دبی: (m<sup>3</sup>/hr)</label>
+                <input type="text" class="form-control" id="flow_input" name="flow" required>
+            </div>
+            <div class="col-md-3 d-flex flex-row align-items-center ms-auto">
+                <button type="submit" class="btn btn-primary">فیلتر محصولات</button>
+            </div>
+        </div>
+    </form>
+    <table class="table table-bordered table-responsive text-center">
+        <thead>
+            <tr>
+                <th>نام الکتروپمپ</th>
+                <th>مدل</th>
+                <th>حداکثر هد (m)</th>
+                <th>حداکثر دبی (m<sup>3</sup>/hr)</th>
+                <th>مشخصات فنی</th>
+                <th>درخواست راهنمایی</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in product_list %}
+                <tr>
+                    <td><a href="{% url 'product_detail' product.id %}" target="_blank" class="text-decoration-none">{{ product.pump_name }}</a></td>
+                    <td>{{ product.main_model }}</td>
+                    <td>{{ product.max_head }}</td>
+                    <td>{{ product.max_flow }}</td>
+                    <td><a href="{{ product.pump_technical_datasheet_fa.url }}" target="_blank" class="text-decoration-none ">مشخصات فنی محصول</a></td>
+                    <td><a href="{% url 'contact_us' %}" target="_blank" class="text-decoration-none ">ارتباط با کارشناسان</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="pagination-div">
+        {% if product_list.has_other_pages %}
+            <ul class="pagination justify-content-center">
+                {% if product_list.has_previous %}
+                    <li class="page-item"><a class="page-link" href="?page={{ product_list.previous_page_number }}">قبلی </a></li>
+                {% else %}
+                    <li class="page-item disabled"><a class="page-link" href="#"><span>قبلی</span></a></li>
+                {% endif %}
+                {% for i in product_list.paginator.page_range %}
+                    {% if product_list.number == i %}
+                        <li class="active page-item"><a class="page-link" href="#"><span>{{ i }} <span class="sr-only">(current)</span></span></a></li>
+                    {% else %}
+                        <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if product_list.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ product_list.next_page_number }}">بعدی</a></li>
+                {% else %}
+                    <li class="disabled page-item"><a href="#" class="page-link"><span>بعدی</span></a></li>
+                {% endif %}
+            </ul>
+        {% endif %}
+    </div>
+</div>

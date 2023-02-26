@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load custom_tags %}
 
 
 {% block title %}
@@ -14,6 +13,16 @@
 <section>
     <div class="container my-5">
         <div class="row">
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li  {% if message.tags %} class=" {{ message.tags }} text-success" {% endif %} style=" list-style-type: none;">
+                        <i class="bi bi-check2-circle me-2"  style="font-size: 1.5rem;"></i>
+                        {{ message }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
             <h1 class="h4 fw-bold mb-3">با ما در ارتباط باشید</h1>
             <p class="text-justified nm-text-color">
                 {% for text in contact_page_data %}
@@ -31,7 +40,7 @@
 {% comment %} بخش دوم، شامل کارت‌های اطلاعات تماس {% endcomment %}
 <section>
     <div class="container">
-        <div class="row g-4">
+        <div class="row g-4 equal-cols">
             <div class="col-md-6">
                 <div class="card mb-5">
                     <div class="card-body">
@@ -104,12 +113,40 @@
 
 {% comment %} بخش سوم برای فرم تماس با ما {% endcomment %}
 <section>
-    <form method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <button type="submit">Submit</button>
-</form>
+    <div class="container my-4">
+        <div class="row align-items-center">
+            {% comment %} //TODO تنظیم استایل فرم تماس با ما، قرار دادن متن و تصویری در سمت راست فرم {% endcomment %}
+            <div class="col-10 col-lg-12 offset-1 offset-lg-0">
+                <h3 class="h4 fw-bold mb-3">ارتباط با کارشناسان نوید موتور</h3>
+                <p class="text-justified nm-text-color">
+                    {% for text in contact_page_data %}
+                        {% if "متن کنار" in text.key %}
+                            {{ text.value }}
+                        {% else %}
+                        {% endif %}
+                    {% endfor %}
+                </p>
+            </div>
+            <div class="col-10 col-lg-8 offset-1 offset-lg-2">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    
+                    {% for item in form %}
+                        <p>{{ item.label_tag }} {{ item }}</p>
+                        <p></p>
+                    {% endfor %}
+                        
+                    <div class="row text-center">
+                        <div class="col">
+                            <input class="btn btn-primary my-3" type="submit" value="ارسال پیام">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </section>
+
 {% endblock content %}
 
     

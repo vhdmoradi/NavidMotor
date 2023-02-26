@@ -1,0 +1,219 @@
+[
+{
+   "model": "core.province",
+   "pk": 1,
+   "fields": {
+      "name": "آذربايجان شرقي"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 2,
+   "fields": {
+      "name": "آذربايجان غربي"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 3,
+   "fields": {
+      "name": "اردبيل"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 4,
+   "fields": {
+      "name": "اصفهان"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 5,
+   "fields": {
+      "name": "البرز"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 6,
+   "fields": {
+      "name": "ايلام"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 7,
+   "fields": {
+      "name": "بوشهر"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 8,
+   "fields": {
+      "name": "تهران"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 9,
+   "fields": {
+      "name": "چهارمحال بختياري"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 10,
+   "fields": {
+      "name": "خراسان جنوبي"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 11,
+   "fields": {
+      "name": "خراسان رضوي"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 12,
+   "fields": {
+      "name": "خراسان شمالي"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 13,
+   "fields": {
+      "name": "خوزستان"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 14,
+   "fields": {
+      "name": "زنجان"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 15,
+   "fields": {
+      "name": "سمنان"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 16,
+   "fields": {
+      "name": "سيستان و بلوچستان"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 17,
+   "fields": {
+      "name": "فارس"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 18,
+   "fields": {
+      "name": "قزوين"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 19,
+   "fields": {
+      "name": "قم"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 20,
+   "fields": {
+      "name": "كردستان"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 21,
+   "fields": {
+      "name": "كرمان"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 22,
+   "fields": {
+      "name": "كرمانشاه"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 23,
+   "fields": {
+      "name": "كهكيلويه و بويراحمد"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 24,
+   "fields": {
+      "name": "گلستان"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 25,
+   "fields": {
+      "name": "گيلان"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 26,
+   "fields": {
+      "name": "لرستان"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 27,
+   "fields": {
+      "name": "مازندران"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 28,
+   "fields": {
+      "name": "مركزي"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 29,
+   "fields": {
+      "name": "هرمزگان"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 30,
+   "fields": {
+      "name": "همدان"
+   }
+},
+{
+   "model": "core.province",
+   "pk": 31,
+   "fields": {
+      "name": "يزد"
+   }
+}
+]
