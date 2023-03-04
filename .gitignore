@@ -1,1 +1,16 @@
 .venv/
+**/__pycache__
+**/.idea
+**/.DS_Store
+**/__snapshots__
+**/.cache
+**/.vscode
+**/env
+*.so
+*.py[cod]
+.Python
+*.tgz
+
+
+
+

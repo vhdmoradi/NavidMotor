@@ -45,7 +45,7 @@
                 {% csrf_token %}
                         <div class="row py-5">
                             {#  main select div: usage or model? #}
-                            <div class="col-md-3 mx-md-5">
+                            <div class="col-md-3 mx-md-3">
                                 <h2 class="h5 nm-text-color fw-bold mb-4 mt-2 mt-md-0">انتخاب بر اساس:</h2>
                                 <select required aria-label="Select usage or model" id="usage_model_select"
                                         class="form-select" onchange="set_usage_or_model_dic()" name="usage_model_select">
@@ -55,7 +55,7 @@
                                 </select>
                             </div>
                             {#  usage or model select div #}
-                            <div class="col-md-3 mx-md-5">
+                            <div class="col-md-3 mx-md-3">
                             {#  usage select div #}
                                 <div class="usage visually-hidden" id="usage_div">
                                     <h2 class="h5 nm-text-color fw-bold mb-4">انتخاب کاربرد:</h2>
@@ -80,7 +80,7 @@
                                 </div>
                             </div>
                             {# select sub_usage or pump_type div #}
-                            <div class="col-md-3 mx-md-5">
+                            <div class="col-md-3 mx-md-3">
                             {#  sub_usage select div #}
                                 <div class="sub_usage visually-hidden" id="sub_usage_div">
                                     <h2 class="h5 nm-text-color fw-bold mb-4">انتخاب کاربرد جزئی:</h2>
