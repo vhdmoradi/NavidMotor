@@ -1,13 +1,18 @@
 {% comment %} this template is for header and navbar {% endcomment %}
-{% load static %}
+{% load static i18n %}
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+  {% get_current_language as lang %}
+<html lang="fa" {% if lang == "fa" or lang == "ar" %} dir="rtl" {% else %} dir="ltr" {% endif %}>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% if lang == "fa" or lang == "ar" %}
       <link rel="stylesheet" href="{% static 'css/bootstrap.rtl.css' %}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    {% elif lang == "en" %}
+      <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  {% endif %}
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{% static 'css/main_styles.css' %}" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
@@ -29,8 +34,9 @@
       {% comment %} // TODO: مشکل کولپس شدن در اندازه 1167 {% endcomment %}
       <nav class="navbar navbar-expand-lg " style="height: 75px; background-color: #009999;">
         <div class="container-fluid">
+
           <a class="navbar-brand text-white py-0" href="{% url 'home' %}"
-            ><img src="{% static '/images/intro_logo_sm_padding.png' %}" alt="لوگوی نوید موتور" class="img-fluid ms-3"></a
+            ><img src="{% static '/images/intro_logo_sm_padding.png' %}" alt="Navid Motor Logo" class="img-fluid ms-3"></a
           >
             <div class="ms-auto me-3 d-flex fs-3 d-lg-none"><i class="bi bi-search icon-style"></i></div>
 
@@ -50,12 +56,12 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="{% url 'about_us' %}"
-                  >درباره ما</a
+                  >{% translate "درباره ما" %}</a
                 >
               </li>
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="{% url 'solution_main' %}"
-                  >راهکار ما</a
+                  >{% translate "راهکار ما" %}</a
                 >
               </li>
               <li class="nav-item dropdown">
@@ -66,26 +72,44 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  محصولات
+                  {% translate "محصولات" %}
                 </a>
                 <ul class="dropdown-menu slideIn animate mt-lg-3" style="background-color: #009999; color: white;">
-                  <li><a class="dropdown-item" href="{% url 'products_usage_main' %}">محوصلات بر اساس کاربرد</a></li>
-                  <li><a class="dropdown-item" href="{% url 'products_model_main' %}">محصولات بر اساس مدل</a></li>
+                  <li><a class="dropdown-item" href="{% url 'products_usage_main' %}">{% translate "محوصلات بر اساس کاربرد" %}</a></li>
+                  <li><a class="dropdown-item" href="{% url 'products_model_main' %}">{% translate "محصولات بر اساس مدل" %}</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a href="{% url 'sales_network' %}" class="nav-link">شبکه فروش</a>
+                <a href="{% url 'sales_network' %}" class="nav-link">{% translate "شبکه فروش" %}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link">خدمات پس از فروش</a>
+                <a class="nav-link">{% translate "خدمات پس از فروش" %}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link">مرکز آموزش نوید موتور</a>
+                <a class="nav-link">{% translate "مرکز آموزش نوید موتور" %}</a>
               </li>
               <li class="nav-item">
-                <a href="{% url 'contact_us' %}" class="nav-link">تماس با ما</a>
+                <a href="{% url 'contact_us' %}" class="nav-link">{% translate "تماس با ما" %}</a>
               </li>
             </ul>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {% if lang == "fa" or lang == "ar" %} انتخاب زبان {% elif lang == "en" %} Select Language {% endif %}
+                </button>
+                  <ul class="dropdown-menu "style="background-color: #009999; color: white;">
+                      {% get_available_languages as LANGUAGES %}
+                      {% get_language_info_list for LANGUAGES as languages %}
+
+
+                      {% for language in languages %}
+                          <li>
+                              <a href="/{{ language.code }}/" class="dropdown-item">
+                                  {{ language.name_local }}
+                              </a>
+                          </li>
+                      {% endfor %}
+                  </ul>
+              </div>
 {#            <div class="me-5 d-none d-lg-flex fs-3 mb-3 mb-lg-0"><i class="bi bi-search icon-style"></i></div>#}
             {% comment %} //TODO ساخت سرچ باکس با آیکون سرچ {% endcomment %}
             {% comment %} <form class="ms-auto me-3 d-none d-lg-flex" role="search">
@@ -116,40 +140,40 @@
     <div class="row">
       {% comment %} ستون اطلاعات تماس کارخانه {% endcomment %}
       <div class="col-md-4 text-white">
-        <h5 class="fw-bold mt-4">دفتر مرکزی کارخانه</h5>
+        <h5 class="fw-bold mt-4">{% translate "دفتر مرکزی کارخانه" %}</h5>
         <div class="col-10">
           <hr>
         </div>
-        <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-geo-alt me-2"></i>تبریز، جاده آذرشهر، شهرک صنعتی شهید سلیمی، بلوک ۳۷/۲، قطعه ۱۱</p>
-        <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-telephone me-2"></i></i>۸۲۸۸ ۳۴۳۲ - ۰۴۱ | ۸۲۷۷ ۳۴۳۲ - ۰۴۱</p>
-        <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-newspaper me-2"></i></i>۸۲۹۹ ۳۴۳۲ - ۰۴۱</p>
+        <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-geo-alt me-2"></i>{% translate "تبریز، جاده آذرشهر، شهرک صنعتی شهید سلیمی، بلوک ۳۷/۲، قطعه ۱۱" %}</p>
+        <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-telephone me-2"></i></i>۸۲۸۸ ۳۴۳۲ - ۴۱ 98+ | ۸۲۷۷ ۳۴۳۲ - ۴۱ 98+ </p>
+        <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-newspaper me-2"></i></i>۸۲۹۹ ۳۴۳۲ - ۴۱ 98+ </p>
         <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-envelope me-2"></i></i>info@navidmotor.com</p>
       </div>
         <div class="col-md-4 text-white">
-        <h5 class="fw-bold mt-4">دفتر مرکزی فروش</h5>
+        <h5 class="fw-bold mt-4">{% translate "دفتر مرکزی فروش" %}</h5>
         <div class="col-10">
           <hr>
         </div>
-        <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-geo-alt me-2"></i>تهران، خیابان طالقانی، خیابان بهار شمالی، پلاک ۳۱۳</p>
-        <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-telephone me-2"></i></i>۵۷۰۹ ۷۷۵۲ - ۰۲۱ | ۵۷۰۸ ۷۷۵۲ - ۰۲۱</p>
-        <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-newspaper me-2"></i></i>۲۳۲۴ ۷۷۵۲ - ۰۲۱</p>
+        <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-geo-alt me-2"></i>{% translate "تهران، خیابان طالقانی، خیابان بهار شمالی، پلاک ۳۱۳" %}</p>
+        <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-telephone me-2"></i></i>۵۷۰۹ ۷۷۵۲ - 21 98+  | ۵۷۰۸ ۷۷۵۲ - 21 98+  </p>
+        <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-newspaper me-2"></i></i>۲۳۲۴ ۷۷۵۲ - 21 98+  </p>
         <p class="lh-base lh-md-sm" style="font-size: 0.9rem;"><i class="bi bi-envelope me-2"></i></i>sales@navidmotor.com</p>
       </div>
 
       {% comment %} ستون پیوندها {% endcomment %}
       <div class="col-md-4 text-white">
-        <h5 class="fw-bold mt-4">پیوندها</h5>
+        <h5 class="fw-bold mt-4">{% translate "پیوندها" %}</h5>
         <div class="col-10">
           <hr>
         </div>
-        <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-boxes me-2"></i>سامانه انتخاب پمپ نوید موتور</p></a>
-        <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-calendar3 me-2"></i>سیستم جامع حضور و غیاب کارا</p></a>
-        <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-motherboard me-2"></i>سامانه تحت وب نویدموتور (لینک ۱)</p></a>
-        <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-motherboard me-2"></i>سامانه تحت وب نویدموتور (لینک ۲)</p></a>
-        <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-check2-circle me-2"></i>سامانه ثبت سفارش نمایندگان</p></a>
-        <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-envelope me-2"></i>پورتال ایمیل</p></a>
-        <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-instagram me-2"></i>اینستاگرام</p></a>
-        <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-whatsapp me-2"></i>واتس‌اپ</p></a>
+        <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-boxes me-2"></i>{% translate "سامانه انتخاب پمپ نوید موتور" %}</p></a>
+        <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-calendar3 me-2"></i>{% translate "سیستم جامع حضور و غیاب کارا" %}</p></a>
+        <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-motherboard me-2"></i>{% translate "سامانه تحت وب نویدموتور (لینک ۱)" %}</p></a>
+        <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-motherboard me-2"></i>{% translate "سامانه تحت وب نویدموتور (لینک ۲)" %}</p></a>
+        <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-check2-circle me-2"></i>{% translate "سامانه ثبت سفارش نمایندگان" %}</p></a>
+        <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-envelope me-2"></i>{% translate "پورتال ایمیل" %}</p></a>
+        <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-instagram me-2"></i>{% translate "اینستاگرام" %}</p></a>
+        <a href="#" class="footer-link-style"><p style="font-size: 0.9rem;"><i class="bi bi-whatsapp me-2"></i>{% translate "واتس‌اپ" %}</p></a>
       </div>
       
       {% comment %} ستون شبکه‌های اجتماعی {% endcomment %}
@@ -172,7 +196,7 @@
     </div>
     <div class="row justify-content-center text-center">
       <div class="col-8"><hr class="text-white"></div>
-      <p class="text-white" style="font-size: 0.75rem;"><i class="bi bi-c-circle me-2"></i>کلیه حقوق این وبسایت متعلق به شرکت صنایع نوید موتور می‌باشد.</p>
+      <p class="text-white" style="font-size: 0.75rem;"><i class="bi bi-c-circle me-2"></i>{% translate "کلیه حقوق این وبسایت متعلق به شرکت صنایع نوید موتور می‌باشد." %}</p>
     </div>
   
   </div>

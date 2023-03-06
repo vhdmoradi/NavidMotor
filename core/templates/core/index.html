@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block title %}
-    صفحه اصلی
+   {% if lang == "fa" %} صفحه اصلی {% elif lang == "en" %} Home {% endif %}
 {% endblock title %}
     
 {% block content %}
@@ -15,36 +15,35 @@
     </div>
 </div>
 </section>
-
 {% comment %} this is introduction section {% endcomment %}
-<section>
-    <div class="container my-5">
-        <div class="row align-items-center">
-            <div class="d-none d-lg-flex col-lg-4 px-auto">
-                <img src="{% static '/images/nm_se_dual_logo.png' %}" alt="لوگوی مشترک نوید موتور و سمنان انرژی" class="img-fluid">
-            </div>
-            <div class="col-lg-8">
-                <h1 class="h4 fw-bold">شرکت صنایع نوید موتور</h1>
-                <p class="mt-3 text-justified text-english fw-semibold nm-text-color" style="direction: ltr; ">
-                {% for text in home_page_data %}
-                    {% if "انگلیسی" in text.key %}
-                        {{ text.value }}
-                    {% else %}
-                    {% endif %}
-                {% endfor %}
-                    
-                </p>
-                <p class="mt-3 text-justified nm-text-color lh-lg">
-                    {% for text in home_page_data %}
-                      {% if "فارسی" in text.key %}
-                        {{ text.value|safe }}
-                      {% else %}
-                       {% endif %}
-                     {% endfor %}</p>
-            </div>
-        </div>
-    </div>
-</section>
+{#<section>#}
+{#    <div class="container my-5">#}
+{#        <div class="row align-items-center">#}
+{#            <div class="d-none d-lg-flex col-lg-4 px-auto">#}
+{#                <img src="{% static '/images/nm_se_dual_logo.png' %}" alt="لوگوی مشترک نوید موتور و سمنان انرژی" class="img-fluid">#}
+{#            </div>#}
+{#            <div class="col-lg-8">#}
+{#                <h1 class="h4 fw-bold">شرکت صنایع نوید موتور</h1>#}
+{#                <p class="mt-3 text-justified text-english fw-semibold nm-text-color" style="direction: ltr; ">#}
+{#                {% for text in home_page_data %}#}
+{#                    {% if "انگلیسی" in text.key %}#}
+{#                        {{ text.value }}#}
+{#                    {% else %}#}
+{#                    {% endif %}#}
+{#                {% endfor %}#}
+{#                    #}
+{#                </p>#}
+{#                <p class="mt-3 text-justified nm-text-color lh-lg">#}
+{#                    {% for text in home_page_data %}#}
+{#                      {% if "فارسی" in text.key %}#}
+{#                        {{ text.value|safe }}#}
+{#                      {% else %}#}
+{#                       {% endif %}#}
+{#                     {% endfor %}</p>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</section>#}
 
 
 {% comment %} this is site cards section {% endcomment %}
@@ -56,8 +55,8 @@
                 <div class="card text-center card-hover bg-gray">
                     <a href="{% url 'solution_main' %}"><img src="{% static '/images/solution.png' %}" class="card-img-top m-auto mt-3" alt="تصویر کارت راهکار ما" style="width: 150px;"></a>
                     <div class="card-body">
-                        <a href="{% url 'solution_main' %}"><h5 class="card-title card-title-text">راهکار ما</h5></a>
-                        <p class="card-text card-body-text">انتخاب الکتروپمپ مناسب برای هر کاربرد</p>
+                        <a href="{% url 'solution_main' %}"><h5 class="card-title card-title-text">{% translate "راهکار ما" %}</h5></a>
+                        <p class="card-text card-body-text">{% translate "انتخاب الکتروپمپ مناسب برای هر کاربرد" %}</p>
                     </div>
                 </div>
             </div>
@@ -66,8 +65,8 @@
                 <div class="card text-center card-hover bg-gray">
                     <a href="{% url 'products_usage_main' %}"><img src="{% static '/images/products.png' %}" class="card-img-top m-auto mt-3" alt="تصویر کارت محصولات" style="width: 150px;"></a>
                     <div class="card-body">
-                        <a href="{% url 'products_usage_main' %}"><h5 class="card-title card-title-text">محصولات</h5></a>
-                        <p class="card-text card-body-text">دسته‌بندی الکتروپمپ‌ها با کاربرد و مدل</p>
+                        <a href="{% url 'products_usage_main' %}"><h5 class="card-title card-title-text">{% translate "محصولات" %}</h5></a>
+                        <p class="card-text card-body-text">{% translate "دسته‌بندی الکتروپمپ‌ها با کاربرد و مدل" %}</p>
                     </div>
                 </div>
             </div>
@@ -76,8 +75,8 @@
                 <div class="card text-center card-hover bg-gray">
                     <a href="{% url 'sales_network' %}"><img src="{% static '/images/sales_network.png' %}" class="card-img-top m-auto mt-3" alt="تصویر کارت شبکه نمایندگان فروش" style="width: 150px;"></a>
                     <div class="card-body">
-                        <a href="{% url 'sales_network' %}"><h5 class="card-title card-title-text">شبکه نمایندگان فروش</h5></a>
-                        <p class="card-text card-body-text">لیست نمایندگان معتبر نوید موتور در سراسر ایران</p>
+                        <a href="{% url 'sales_network' %}"><h5 class="card-title card-title-text">{% translate "شبکه نمایندگان فروش" %}</h5></a>
+                        <p class="card-text card-body-text">{% translate "لیست نمایندگان معتبر نوید موتور در سراسر ایران" %}</p>
                     </div>
                 </div>
             </div>
@@ -86,8 +85,8 @@
                 <div class="card text-center card-hover bg-gray">
                     <a href="#"><img src="{% static '/images/after_sales_support.png' %}" class="card-img-top m-auto mt-3" alt="تصویر کارت خدمات پس از فروش" style="width: 150px;"></a>
                     <div class="card-body">
-                        <a href="#"><h5 class="card-title card-title-text">خدمات پس از فروش</h5></a>
-                        <p class="card-text card-body-text">گارانتی تعویض و خدمات پس از فروش، سریع و همه‌جا</p>
+                        <a href="#"><h5 class="card-title card-title-text">{% translate "خدمات پس از فروش" %}</h5></a>
+                        <p class="card-text card-body-text">{% translate "گارانتی تعویض و خدمات پس از فروش، سریع و همه‌جا" %}</p>
                     </div>
                 </div>
             </div>
@@ -96,8 +95,8 @@
                 <div class="card text-center card-hover bg-gray">
                     <a href="#"><img src="{% static '/images/teaching_center.png' %}" class="card-img-top m-auto mt-3" alt="تصویر کارت مرکز آموزش نوید موتورصولات" style="width: 150px;"></a>
                     <div class="card-body">
-                        <a href="#"><h5 class="card-title card-title-text">مرکز آموزش نوید موتور</h5></a>
-                        <p class="card-text card-body-text">مطالب آموزشی الکتروپمپ و دوره‌های تخصصی نوید موتور</p>
+                        <a href="#"><h5 class="card-title card-title-text">{% translate "مرکز آموزش نوید موتور" %}</h5></a>
+                        <p class="card-text card-body-text">{% translate "مطالب آموزشی الکتروپمپ و دوره‌های تخصصی نوید موتور" %}</p>
                     </div>
                 </div>
             </div>
@@ -106,8 +105,8 @@
                 <div class="card text-center card-hover bg-gray">
                     <a href="#"><img src="{% static '/images/virtual-tour.png' %}" class="card-img-top m-auto mt-3" alt="تصویر کارت تور مجازی" style="width: 150px;"></a>
                     <div class="card-body">
-                        <a href="#"><h5 class="card-title card-title-text">تور مجازی</h5></a>
-                        <p class="card-text card-body-text">آشنایی با نوید موتور با تور مجازی شرکت صنایع نوید موتور</p>
+                        <a href="#"><h5 class="card-title card-title-text">{% translate "تور مجازی" %}</h5></a>
+                        <p class="card-text card-body-text">{% translate "آشنایی با نوید موتور با تور مجازی شرکت صنایع نوید موتور" %}</p>
                     </div>
                 </div>
             </div>

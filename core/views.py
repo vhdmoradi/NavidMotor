@@ -22,7 +22,9 @@ class HomePageView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(HomePageView, self).get_context_data(**kwargs)
-        context["home_page_data"] = self.model.objects.filter(key__icontains="اصلی")
+        context["home_page_data"] = self.model.objects.filter(
+            key__icontains="اصلی"
+        )
         return context
 
     # just test:
@@ -41,7 +43,9 @@ class AboutPageView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(AboutPageView, self).get_context_data(**kwargs)
-        context["about_page_data"] = self.model.objects.filter(key__icontains="درباره")
+        context["about_page_data"] = self.model.objects.filter(
+            key__icontains="درباره"
+        )
         return context
 
 
@@ -77,11 +81,12 @@ class ContactUsPageView(ListView):
         context = super().get_context_data(**kwargs)
         if not kwargs.get("form"):
             context["form"] = form
-
+        print("context from contact us:", context)
         return context
 
     def post(self, request, **kwargs):
         data = request.POST
+        url = request.build_absolute_uri()
         self.object_list = self.get_queryset()
         form = ContactUsForm(data)
         if form.is_valid():
@@ -90,7 +95,7 @@ class ContactUsPageView(ListView):
                 request,
                 "پیام شما با موفقیت ارسال گردید. کارشناسان ما در صورت نیاز با شما تماس خواهند گرفت.",
             )
-            return redirect("/contact-us/")
+            return redirect(url)
         form = ContactUsForm()
         context = self.get_context_data(form=form)
         return self.render_to_response(context)

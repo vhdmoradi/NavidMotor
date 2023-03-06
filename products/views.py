@@ -86,6 +86,7 @@ def products_single_usage_list(request, pk):
     context = {
         **context_of_view,
         **queryset_dictionary,
+        "message": "hello",
     }
     return render(request, "products/products_single_usage_list.html", context)
 

@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 
 {% block title %}
     محصولات بر اساس کاربرد
 {% endblock title %}
 
 {% block content %}
-
     <section>
         <div class="container-fluid">
             <div class="row">
@@ -18,6 +17,8 @@
                     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                         {% comment %} بخش کارت‌های کاربرد {% endcomment %}
                         {% for usage_item in usage_queryset %}
+
+
                             <div class="col mb-5">
                                 <div class="card text-center card-hover bg-gray">
                                     <a href="{% url 'products_single_usage_list' usage_item.id %}"><img src="{{ usage_item.usage_image.url }}" class="card-img-top m-auto mt-3" alt="تصویر کارت راهکار ما" style="width: 150px;"></a>
@@ -27,6 +28,7 @@
                                 </div>
                             </div>
                         {% endfor %}
+
 
                     </div>
                 </div>

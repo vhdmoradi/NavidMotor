@@ -56,3 +56,5 @@ class Agency(models.Model):
 
     def __str__(self):
         return self.title
+
+    autocomplete_fields = ["city", "province"]

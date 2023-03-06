@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
+{% get_current_language as lang %}
 
 
 {% block title %}
-    تماس با ما
+    {% if lang == "fa" %} تماس با ما {% elif lang == "en" %} Contact Us {% endif %}
 {% endblock title %}
     
 
@@ -18,16 +19,19 @@
                     {% for message in messages %}
                     <li  {% if message.tags %} class=" {{ message.tags }} text-success" {% endif %} style=" list-style-type: none;">
                         <i class="bi bi-check2-circle me-2"  style="font-size: 1.5rem;"></i>
-                        {{ message }}
+                        {% translate "پیام شما با موفقیت ارسال گردید. کارشناسان ما در صورت نیاز با شما تماس خواهند گرفت." %}
                     </li>
                     {% endfor %}
                 </ul>
             {% endif %}
-            <h1 class="h4 fw-bold mb-3">با ما در ارتباط باشید</h1>
+            <h1 class="h4 fw-bold mb-3">{% translate "با ما در ارتباط باشید" %}</h1>
+
             <p class="text-justified nm-text-color">
                 {% for text in contact_page_data %}
                     {% if "ابتدایی" in text.key %}
-                        {{ text.value }}
+                        {% with value=text.value %}
+                            {{ value|translate }}
+                        {% endwith %}
                     {% else %}
                     {% endif %}
                 {% endfor %}
