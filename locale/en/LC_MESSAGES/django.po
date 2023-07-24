@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-06 00:05+0330\n"
+"POT-Creation-Date: 2023-03-10 18:20+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,32 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: core/forms.py:16
+msgid "نام"
+msgstr "First Name"
+
+#: core/forms.py:25
+msgid "نام خانوادگی"
+msgstr "Last Name"
+
+#: core/forms.py:35
+msgid "استان"
+msgstr "Province"
+
+#: core/forms.py:44
+#, fuzzy
+#| msgid "پورتال ایمیل"
+msgid "آدرس ایمیل"
+msgstr "Email Portal"
+
+#: core/forms.py:55
+msgid "موضوع"
+msgstr "Subject"
+
+#: core/forms.py:64
+msgid "متن پیام"
+msgstr "Message Text"
+
 #: core/templates/core/contact-us.html:23
 msgid ""
 "پیام شما با موفقیت ارسال گردید. کارشناسان ما در صورت نیاز با شما تماس خواهند "
@@ -25,58 +51,6 @@ msgid ""
 msgstr ""
 "Your email has been sent successfully. Our experts will contact you if "
 "needed."
-
-#: core/templates/core/contact-us.html:28
-msgid "با ما در ارتباط باشید"
-msgstr "Be in Touch With Us"
-
-#: core/templates/core/index.html:62 templates/base.html:68
-msgid "راهکار ما"
-msgstr "Solutions"
-
-#: core/templates/core/index.html:63
-msgid "انتخاب الکتروپمپ مناسب برای هر کاربرد"
-msgstr "Choose the most suitable product for your use case"
-
-#: core/templates/core/index.html:73 templates/base.html:79
-msgid "محصولات"
-msgstr "Products"
-
-#: core/templates/core/index.html:74
-msgid "دسته‌بندی الکتروپمپ‌ها با کاربرد و مدل"
-msgstr "Products categorized by usage and model"
-
-#: core/templates/core/index.html:84
-msgid "شبکه نمایندگان فروش"
-msgstr "Sales agency Network"
-
-#: core/templates/core/index.html:85
-msgid "لیست نمایندگان معتبر نوید موتور در سراسر ایران"
-msgstr "Navid Motor's agency list all over Iran"
-
-#: core/templates/core/index.html:95 templates/base.html:90
-msgid "خدمات پس از فروش"
-msgstr "After Sales Support"
-
-#: core/templates/core/index.html:96
-msgid "گارانتی تعویض و خدمات پس از فروش، سریع و همه‌جا"
-msgstr "After sales support and Warranty"
-
-#: core/templates/core/index.html:106 templates/base.html:93
-msgid "مرکز آموزش نوید موتور"
-msgstr "Navid Motor Educational Center"
-
-#: core/templates/core/index.html:107
-msgid "مطالب آموزشی الکتروپمپ و دوره‌های تخصصی نوید موتور"
-msgstr "Educational articles and Navid Motor's professional courses "
-
-#: core/templates/core/index.html:117
-msgid "تور مجازی"
-msgstr "Virtual Tour"
-
-#: core/templates/core/index.html:118
-msgid "آشنایی با نوید موتور با تور مجازی شرکت صنایع نوید موتور"
-msgstr "Know Navid Motor via our virtual tour"
 
 #: navidmotor/settings.py:145
 msgid "Farsi"
@@ -90,79 +64,56 @@ msgstr ""
 msgid "Arabic"
 msgstr "العربیة"
 
-#: templates/base.html:63
-msgid "درباره ما"
-msgstr "About us"
-
-#: templates/base.html:82
-msgid "محوصلات بر اساس کاربرد"
-msgstr "Products Categorized by Usage"
-
-#: templates/base.html:83
-msgid "محصولات بر اساس مدل"
-msgstr "Products Categorized by Model"
-
-#: templates/base.html:87
-msgid "شبکه فروش"
-msgstr "Sales Network"
-
-#: templates/base.html:96
-msgid "تماس با ما"
-msgstr "Contact Us"
-
-#: templates/base.html:150
-msgid "دفتر مرکزی کارخانه"
-msgstr "Factory Central Office"
-
-#: templates/base.html:154
+#: templates/base.html:201
 msgid "تبریز، جاده آذرشهر، شهرک صنعتی شهید سلیمی، بلوک ۳۷/۲، قطعه ۱۱"
-msgstr ""
+msgstr "Tabriz, Azarshahr Road, Shahid Salimi Industrial Town, Block 37/2, Plot 11"
 
-#: templates/base.html:160
+#: templates/base.html:207
 msgid "دفتر مرکزی فروش"
 msgstr "Sales Central Office"
 
-#: templates/base.html:164
+#: templates/base.html:211
 msgid "تهران، خیابان طالقانی، خیابان بهار شمالی، پلاک ۳۱۳"
-msgstr ""
+msgstr "Tehran, Taleghani Street, Bahar-e-Shomali Street, No. 313."
 
-#: templates/base.html:173
+#: templates/base.html:220
 msgid "پیوندها"
 msgstr "Links"
 
-#: templates/base.html:177
+#: templates/base.html:224
 msgid "سامانه انتخاب پمپ نوید موتور"
 msgstr "Navid Motor Pump Selection System"
 
-#: templates/base.html:178
+#: templates/base.html:225
 msgid "سیستم جامع حضور و غیاب کارا"
 msgstr "Central Rollcall System"
 
-#: templates/base.html:179
+#: templates/base.html:226
 msgid "سامانه تحت وب نویدموتور (لینک ۱)"
 msgstr "Navid Motor's Web Based System (Link 1)"
 
-#: templates/base.html:180
+#: templates/base.html:227
 msgid "سامانه تحت وب نویدموتور (لینک ۲)"
 msgstr "Navid Motor's Web Based System (Link 2)"
 
-#: templates/base.html:181
+#: templates/base.html:228
 msgid "سامانه ثبت سفارش نمایندگان"
 msgstr "Agency's Order Submit System"
 
-#: templates/base.html:182
+#: templates/base.html:229
 msgid "پورتال ایمیل"
 msgstr "Email Portal"
 
-#: templates/base.html:183
+#: templates/base.html:230
 msgid "اینستاگرام"
 msgstr "Instagram"
 
-#: templates/base.html:184
+#: templates/base.html:231
 msgid "واتس‌اپ"
 msgstr "WhatsApp"
 
-#: templates/base.html:208
+#: templates/base.html:255
 msgid "کلیه حقوق این وبسایت متعلق به شرکت صنایع نوید موتور می‌باشد."
 msgstr ""
 "All rights of this website are reserved to Navid Motor Industrial Company."
+

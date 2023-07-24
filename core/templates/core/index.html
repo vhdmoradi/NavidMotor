@@ -2,7 +2,7 @@
 {% load static i18n %}
 
 {% block title %}
-   {% if lang == "fa" %} صفحه اصلی {% elif lang == "en" %} Home {% endif %}
+   {% if lang == "fa" %} صفحه اصلی {% elif lang == "en" %} Home page {% elif lang == "ar" %} الصفحة الرئيسية {% endif %}
 {% endblock title %}
     
 {% block content %}
@@ -55,8 +55,8 @@
                 <div class="card text-center card-hover bg-gray">
                     <a href="{% url 'solution_main' %}"><img src="{% static '/images/solution.png' %}" class="card-img-top m-auto mt-3" alt="تصویر کارت راهکار ما" style="width: 150px;"></a>
                     <div class="card-body">
-                        <a href="{% url 'solution_main' %}"><h5 class="card-title card-title-text">{% translate "راهکار ما" %}</h5></a>
-                        <p class="card-text card-body-text">{% translate "انتخاب الکتروپمپ مناسب برای هر کاربرد" %}</p>
+                        <a href="{% url 'solution_main' %}"><h5 class="card-title card-title-text">{% if lang == "fa" %} راهکار ما {% elif lang == "en" %} Our solution {% elif lang == "ar" %} حلولنا {% endif %}</h5></a>
+                        <p class="card-text card-body-text">{% if lang == "fa" %} انتخاب الکتروپمپ مناسب برای هر کاربرد {% elif lang == "en" %} Selecting the appropriate electric pump for each application {% elif lang == "ar" %} اختيار المضخة الكهربائية المناسبة لكل تطبيق {% endif %}</p>
                     </div>
                 </div>
             </div>
@@ -65,8 +65,12 @@
                 <div class="card text-center card-hover bg-gray">
                     <a href="{% url 'products_usage_main' %}"><img src="{% static '/images/products.png' %}" class="card-img-top m-auto mt-3" alt="تصویر کارت محصولات" style="width: 150px;"></a>
                     <div class="card-body">
-                        <a href="{% url 'products_usage_main' %}"><h5 class="card-title card-title-text">{% translate "محصولات" %}</h5></a>
-                        <p class="card-text card-body-text">{% translate "دسته‌بندی الکتروپمپ‌ها با کاربرد و مدل" %}</p>
+                        <a href="{% url 'products_usage_main' %}">
+                            <h5 class="card-title card-title-text">
+                            {% if lang == "fa" %} محصولات {% elif lang == "en" %} Products {% elif lang == "ar" %} المنتجات {% endif %}
+                            </h5>
+                        </a>
+                        <p class="card-text card-body-text">{% if lang == "fa" %} دسته‌بندی الکتروپمپ‌ها با کاربرد و مدل {% elif lang == "en" %} Categorization of electric pumps by application and model {% elif lang == "ar" %} تصنيف المضخات الكهربائية حسب التطبيق والنموذج {% endif %}</p>
                     </div>
                 </div>
             </div>
@@ -75,8 +79,8 @@
                 <div class="card text-center card-hover bg-gray">
                     <a href="{% url 'sales_network' %}"><img src="{% static '/images/sales_network.png' %}" class="card-img-top m-auto mt-3" alt="تصویر کارت شبکه نمایندگان فروش" style="width: 150px;"></a>
                     <div class="card-body">
-                        <a href="{% url 'sales_network' %}"><h5 class="card-title card-title-text">{% translate "شبکه نمایندگان فروش" %}</h5></a>
-                        <p class="card-text card-body-text">{% translate "لیست نمایندگان معتبر نوید موتور در سراسر ایران" %}</p>
+                        <a href="{% url 'sales_network' %}"><h5 class="card-title card-title-text">{% if lang == "fa" %} شبکه نمایندگان فروش {% elif lang == "en" %} Sale Agencies Network {% elif lang == "ar" %} شبكة ممثلي المبيعات {% endif %}</h5></a>
+                        <p class="card-text card-body-text">{% if lang == "fa" %} لیست نمایندگان معتبر نوید موتور در سراسر ایران {% elif lang == "en" %} List of Valid Representatives of Navid Motor across Iran {% elif lang == "ar" %} قائمة الممثلين الصالحين لشركة نويد موتور في جميع أنحاء إيران {% endif %}</p>
                     </div>
                 </div>
             </div>
@@ -85,8 +89,8 @@
                 <div class="card text-center card-hover bg-gray">
                     <a href="#"><img src="{% static '/images/after_sales_support.png' %}" class="card-img-top m-auto mt-3" alt="تصویر کارت خدمات پس از فروش" style="width: 150px;"></a>
                     <div class="card-body">
-                        <a href="#"><h5 class="card-title card-title-text">{% translate "خدمات پس از فروش" %}</h5></a>
-                        <p class="card-text card-body-text">{% translate "گارانتی تعویض و خدمات پس از فروش، سریع و همه‌جا" %}</p>
+                        <a href="#"><h5 class="card-title card-title-text">{% if lang == "fa" %} خدمات پس از فروش {% elif lang == "en" %} After-sales services {% elif lang == "ar" %} خدمات ما بعد البيع {% endif %}</h5></a>
+                        <p class="card-text card-body-text">{% if lang == "fa" %} گارانتی تعویض و خدمات پس از فروش، سریع و همه‌جا {% elif lang == "en" %} Replacement warranty and after-sales services, quick and everywhere. {% elif lang == "ar" %} ضمان الاستبدال وخدمات ما بعد البيع، سريعة وفي كل مكان. {% endif %}</p>
                     </div>
                 </div>
             </div>
@@ -95,8 +99,20 @@
                 <div class="card text-center card-hover bg-gray">
                     <a href="#"><img src="{% static '/images/teaching_center.png' %}" class="card-img-top m-auto mt-3" alt="تصویر کارت مرکز آموزش نوید موتورصولات" style="width: 150px;"></a>
                     <div class="card-body">
-                        <a href="#"><h5 class="card-title card-title-text">{% translate "مرکز آموزش نوید موتور" %}</h5></a>
-                        <p class="card-text card-body-text">{% translate "مطالب آموزشی الکتروپمپ و دوره‌های تخصصی نوید موتور" %}</p>
+                        <a href="#">
+                            <h5 class="card-title card-title-text">
+                                {% if lang == "fa" %} مرکز آموزش نوید موتور
+                                {% elif lang == "en" %} Navid Motor Education Center
+                                {% elif lang == "ar" %} مركز تعليم نويد موتور
+                                {% endif %}
+                            </h5>
+                        </a>
+                        <p class="card-text card-body-text">
+                            {% if lang == "fa" %} مطالب آموزشی الکتروپمپ و دوره‌های تخصصی نوید موتور
+                            {% elif lang == "en" %} Educational content on electric pumps and specialized courses at Navid Motor
+                            {% elif lang == "ar" %}محتوى تعليمي حول المضخات الكهربائية والدورات المتخصصة في نويد موتور
+                            {% endif %}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -105,8 +121,20 @@
                 <div class="card text-center card-hover bg-gray">
                     <a href="#"><img src="{% static '/images/virtual-tour.png' %}" class="card-img-top m-auto mt-3" alt="تصویر کارت تور مجازی" style="width: 150px;"></a>
                     <div class="card-body">
-                        <a href="#"><h5 class="card-title card-title-text">{% translate "تور مجازی" %}</h5></a>
-                        <p class="card-text card-body-text">{% translate "آشنایی با نوید موتور با تور مجازی شرکت صنایع نوید موتور" %}</p>
+                        <a href="#">
+                            <h5 class="card-title card-title-text">
+                                {% if lang == "fa" %}تور مجازی نوید موتور
+                                {% elif lang == "en" %} Navid Motor virtual tour
+                                {% elif lang == "ar" %} جولة افتراضية في نويد موتور
+                                {% endif %}
+                            </h5>
+                        </a>
+                        <p class="card-text card-body-text">
+                            {% if lang == "fa" %} آشنایی با نوید موتور با تور مجازی شرکت صنایع نوید موتور
+                            {% elif lang == "en" %} Get to know Navid Motor with Navid Motor Industries' virtual tour
+                            {% elif lang == "ar" %} تعرف على نوید موتور من خلال جولة شركة صنایع نوید موتور الافتراضیة
+                            {% endif %}
+                        </p>
                     </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@
 
 
 {% block title %}
-    {% if lang == "fa" %} تماس با ما {% elif lang == "en" %} Contact Us {% endif %}
+    {% if lang == "fa" %} تماس با ما {% elif lang == "ar" %} اتصل بنا {% elif lang == "en" %} Contact Us {% endif %}
 {% endblock title %}
     
 
@@ -24,17 +24,23 @@
                     {% endfor %}
                 </ul>
             {% endif %}
-            <h1 class="h4 fw-bold mb-3">{% translate "با ما در ارتباط باشید" %}</h1>
+            <h1 class="h4 fw-bold mb-3">
+                {% if lang == "fa" %}با ما در ارتباط باشید
+                {% elif lang == "ar" %} تواصل معنا
+                {% elif lang == "en" %} Get in touch with us
+                {% endif %}
+            </h1>
 
             <p class="text-justified nm-text-color">
-                {% for text in contact_page_data %}
-                    {% if "ابتدایی" in text.key %}
-                        {% with value=text.value %}
-                            {{ value|translate }}
-                        {% endwith %}
-                    {% else %}
+            {% for text in contact_page_data %}
+                {% if "ابتدایی" in text.key %}
+                    {% if lang == text.language %}
+                        {{ text.value }}
                     {% endif %}
-                {% endfor %}
+                    {% else %}
+                {% endif %}
+            {% endfor %}
+
             </p>
         </div>
     </div>
@@ -48,26 +54,33 @@
             <div class="col-md-6">
                 <div class="card mb-5">
                     <div class="card-body">
-                        <h2 class="h5 card-title text-center">دفتر مرکزی کارخانه</h2>  
+                        <h2 class="h5 card-title text-center">
+                            {% if lang == "fa" %}دفتر مرکزی کارخانه
+                            {% elif lang == "en" %} Factory central office
+                            {% elif lang == "ar" %} المکتب الرئيسي للمصنع
+                            {% endif %}
+                        </h2>
                         <hr class="card-text">                      
                         {% for text in contact_page_data  %}
-                            {% if text.key == "آدرس دفتر کارخانه صفحه تماس با ما" %}
-                                <p class="card-text"><i class="bi bi-geo-alt me-2"></i>
+                            {% if "آدرس دفتر کارخانه" in text.key %}
+                                {% if lang == text.language %}
+                                    <p class="card-text"><i class="bi bi-geo-alt me-2"></i>
                                     {{ text.value }}
-                                </p>
-                            {% elif text.key == "شماره تماس اول دفتر کارخانه صفحه تماس با ما" %}
+                                    </p>
+                                {% endif %}
+                            {% elif "شماره تماس اول دفتر کارخانه" in text.key %}
                                 <p class="card-text"><i class="bi bi-telephone me-2"></i>
                                     {{ text.value }}
                                 </p>
-                            {% elif text.key == "شماره تماس دوم دفتر کارخانه صفحه تماس با ما" %}
+                            {% elif "شماره تماس دوم دفتر کارخانه صفحه تماس با ما" in text.key %}
                                 <p class="card-text"><i class="bi bi-telephone me-2"></i>
                                     {{ text.value }}
                                 </p>
-                            {% elif text.key == "شماره فکس دفتر کارخانه صفحه تماس با ما" %}
+                            {% elif "شماره فکس دفتر کارخانه" in text.key %}
                                 <p class="card-text"><i class="bi bi-newspaper me-2"></i>
                                     {{ text.value }}
                                 </p>
-                            {% elif text.key == "ایمیل دفتر کارخانه صفحه تماس با ما" %}
+                            {% elif "ایمیل دفتر کارخانه" in text.key %}
                                 <p class="card-text"><i class="bi bi-envelope me-2"></i>
                                     {{ text.value }}
                                 </p>
@@ -80,27 +93,34 @@
             <div class="col-md-6">
                 <div class="card mb-5">
                     <div class="card-body">
-                        <h2 class="h5 card-title text-center">دفتر مرکزی فروش</h2>                        
+                        <h2 class="h5 card-title text-center">
+                            {% if lang == "fa" %}دفتر مرکزی فروش
+                            {% elif lang == "en" %} Sales central office
+                            {% elif lang == "ar" %}المكتب الرئيسي للمبيعات
+                            {% endif %}
+                        </h2>
                         <hr class="card-text">
                         {% for text in contact_page_data  %}
-                            {% if text.key == "آدرس دفتر فروش صفحه تماس با ما" %}
-                                <p class="card-text"><i class="bi bi-geo-alt me-2"></i>
-                                    {{ text.value }}
-                                </p>
-                            {% elif text.key == "شماره تماس اول دفتر فروش صفحه تماس با ما" %}
+                            {% if "آدرس دفتر فروش" in text.key %}
+                                {% if lang == text.language %}
+                                    <p class="card-text"><i class="bi bi-geo-alt me-2"></i>
+                                        {{ text.value }}
+                                    </p>
+                                {% endif %}
+                            {% elif "شماره تماس اول دفتر فروش" in text.key %}
                                 <p class="card-text"><i class="bi bi-telephone me-2"></i>
                                     {{ text.value }}
                                 </p>
                             
-                            {% elif text.key == "شماره تماس دوم دفتر فروش صفحه تماس با ما" %}
+                            {% elif "شماره تماس دوم دفتر فروش" in text.key %}
                                 <p class="card-text"><i class="bi bi-telephone me-2"></i>
                                     {{ text.value }}
                                 </p>
-                            {% elif text.key == "شماره فکس دفتر فروش صفحه تماس با ما" %}
+                            {% elif "شماره فکس دفتر فروش" in text.key %}
                                 <p class="card-text"><i class="bi bi-newspaper me-2"></i>
                                     {{ text.value }}
                                 </p>
-                            {% elif text.key == "ایمیل دفتر فروش صفحه تماس با ما" %}
+                            {% elif "ایمیل دفتر فروش" in text.key %}
                                 <p class="card-text"><i class="bi bi-envelope me-2"></i>
                                     {{ text.value }}
                                 </p>
@@ -121,11 +141,18 @@
         <div class="row align-items-center">
             {% comment %} //TODO تنظیم استایل فرم تماس با ما، قرار دادن متن و تصویری در سمت راست فرم {% endcomment %}
             <div class="col-10 col-lg-12 offset-1 offset-lg-0">
-                <h3 class="h4 fw-bold mb-3">ارتباط با کارشناسان نوید موتور</h3>
+                <h3 class="h4 fw-bold mb-3">
+                    {% if lang == "fa" %} تماس با ما
+                    {% elif lang == "ar" %} اتصل بنا
+                    {% elif lang == "en" %} Contact Us
+                    {% endif %}
+                </h3>
                 <p class="text-justified nm-text-color">
                     {% for text in contact_page_data %}
                         {% if "متن کنار" in text.key %}
-                            {{ text.value }}
+                            {% if lang == text.language %}
+                                {{ text.value }}
+                            {% endif %}
                         {% else %}
                         {% endif %}
                     {% endfor %}

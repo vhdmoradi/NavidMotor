@@ -1,5 +1,6 @@
 from django.forms import widgets, ModelForm
 from django import forms
+from django.utils.translation import gettext_lazy as _
 
 
 from .models import ContactUsFormModel, City, Province
@@ -12,7 +13,7 @@ class ContactUsForm(ModelForm):
         exclude = ["created"]
 
     first_name = forms.CharField(
-        label="نام",
+        label=_("نام"),
         widget=forms.TextInput(
             attrs={
                 "class": "form-inline d-inline-flex form-control",
@@ -21,7 +22,7 @@ class ContactUsForm(ModelForm):
         ),
     )
     last_name = forms.CharField(
-        label="نام خانوادگی",
+        label=_("نام خانوادگی"),
         widget=forms.TextInput(
             attrs={
                 "class": "form-inline d-inline-flex form-control",
@@ -31,7 +32,7 @@ class ContactUsForm(ModelForm):
     )
     province = forms.ModelChoiceField(
         queryset=Province.objects.all(),
-        label="استان",
+        label=_("استان"),
         widget=forms.Select(
             attrs={
                 "class": "form-select d-inline-flex form-control",
@@ -40,7 +41,7 @@ class ContactUsForm(ModelForm):
         ),
     )
     email = forms.EmailField(
-        label="آدرس ایمیل",
+        label=_("آدرس ایمیل"),
         widget=forms.TextInput(
             attrs={
                 "class": "form-inline d-inline-flex form-control",
@@ -51,7 +52,7 @@ class ContactUsForm(ModelForm):
         ),
     )
     subject = forms.CharField(
-        label="موضوع",
+        label=_("موضوع"),
         widget=forms.TextInput(
             attrs={
                 "class": "form-inline d-inline-flex form-control",
@@ -60,7 +61,7 @@ class ContactUsForm(ModelForm):
         ),
     )
     message_body = forms.CharField(
-        label="متن پیام",
+        label=_("متن پیام"),
         widget=forms.Textarea(
             attrs={
                 "class": "form-inline d-inline-flex form-control",

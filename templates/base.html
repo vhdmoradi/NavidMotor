@@ -55,14 +55,20 @@
           <div class="collapse navbar-collapse px-3 px-lg-0 rounded-bottom" id="navbarSupportedContent" style="background-color: #009999;">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="{% url 'about_us' %}"
-                  >{% translate "درباره ما" %}</a
-                >
+                <a class="nav-link" aria-current="page" href="{% url 'about_us' %}">
+                    {% if lang == "fa" %} درباره ما
+                    {% elif lang == "en" %} About Us
+                    {% elif lang == "ar" %}من نحن
+                    {% endif %}
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="{% url 'solution_main' %}"
-                  >{% translate "راهکار ما" %}</a
-                >
+                <a class="nav-link" aria-current="page" href="{% url 'solution_main' %}">
+                    {% if lang == "fa" %}راهکار ما
+                    {% elif lang == "en" %} Solution
+                    {% elif lang == "ar" %}حلولنا
+                    {% endif %}
+                </a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -72,29 +78,65 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  {% translate "محصولات" %}
+                    {% if lang == "fa" %} محصولات
+                    {% elif lang == "en" %} Products
+                    {% elif lang == "ar" %}المنتجات
+                    {% endif %}
                 </a>
                 <ul class="dropdown-menu slideIn animate mt-lg-3" style="background-color: #009999; color: white;">
-                  <li><a class="dropdown-item" href="{% url 'products_usage_main' %}">{% translate "محوصلات بر اساس کاربرد" %}</a></li>
-                  <li><a class="dropdown-item" href="{% url 'products_model_main' %}">{% translate "محصولات بر اساس مدل" %}</a></li>
+                  <li><a class="dropdown-item" href="{% url 'products_usage_main' %}">
+                        {% if lang == "fa" %} محصولات بر اساس کاربرد
+                        {% elif lang == "en" %}Products by application
+                        {% elif lang == "ar" %} المنتجات حسب الاستخدام
+                        {% endif %}
+                      </a>
+                  </li>
+                  <li>
+                      <a class="dropdown-item" href="{% url 'products_model_main' %}">
+                        {% if lang == "fa" %} محصولات بر اساس مدل
+                        {% elif lang == "en" %} Products by model
+                        {% elif lang == "ar" %}المنتجات حسب الموديل
+                        {% endif %}
+                      </a>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a href="{% url 'sales_network' %}" class="nav-link">{% translate "شبکه فروش" %}</a>
+                <a href="{% url 'sales_network' %}" class="nav-link">
+                    {% if lang == "fa" %} شبکه فروش
+                    {% elif lang == "en" %}Sales Network
+                    {% elif lang == "ar" %}شبكة المبيعات
+                    {% endif %}
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link">{% translate "خدمات پس از فروش" %}</a>
+                <a class="nav-link">
+                    {% if lang == "fa" %}خدمات پس از فروش
+                    {% elif lang == "en" %} After-sales Services
+                    {% elif lang == "ar" %}خدمات ما بعد البيع
+                    {% endif %}
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link">{% translate "مرکز آموزش نوید موتور" %}</a>
+                <a class="nav-link">
+                    {% if lang == "fa" %} مرکز آموزش نوید موتور
+                    {% elif lang == "en" %} Education Center
+                    {% elif lang == "ar" %} مركز تعليم
+                    {% endif %}
+                </a>
               </li>
               <li class="nav-item">
-                <a href="{% url 'contact_us' %}" class="nav-link">{% translate "تماس با ما" %}</a>
+                <a href="{% url 'contact_us' %}" class="nav-link">
+                    {% if lang == "fa" %} تماس با ما
+                    {% elif lang == "en" %} Contact Us
+                    {% elif lang == "ar" %} اتصل بنا
+                    {% endif %}
+                </a>
               </li>
             </ul>
             <div class="dropdown">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        {% if lang == "fa" or lang == "ar" %} انتخاب زبان {% elif lang == "en" %} Select Language {% endif %}
+                        {% if lang == "fa" %}انتخاب زبان {% elif lang == "ar" %} اختيار اللغة {% elif lang == "en" %} Language selection {% endif %}
                 </button>
                   <ul class="dropdown-menu "style="background-color: #009999; color: white;">
                       {% get_available_languages as LANGUAGES %}
@@ -140,7 +182,12 @@
     <div class="row">
       {% comment %} ستون اطلاعات تماس کارخانه {% endcomment %}
       <div class="col-md-4 text-white">
-        <h5 class="fw-bold mt-4">{% translate "دفتر مرکزی کارخانه" %}</h5>
+        <h5 class="fw-bold mt-4">
+            {% if lang == "fa" %} دفتر مرکزی کارخانه
+            {% elif lang == "en" %} Factory central office
+            {% elif lang == "ar" %}  مكتب المركز الرئيسي للمصنع
+            {% endif %}
+        </h5>
         <div class="col-10">
           <hr>
         </div>

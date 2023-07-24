@@ -1,5 +1,4 @@
 from django.db import models
-from django.utils import timezone
 
 
 # from salesnetwork.models import Provinces, Cities
@@ -8,6 +7,18 @@ from django.utils import timezone
 class SiteDataKeyValue(models.Model):
     # //TODO add name field
     # //TODO add fields value_fa, value_en and value_ar
+    LANGUAGES = [
+        ("fa", "فارسی"),
+        ("en", "انگلیسی"),
+        ("ar", "عربی"),
+    ]
+    language = models.CharField(
+        max_length=7,
+        choices=LANGUAGES,
+        blank=False,
+        null=False,
+        verbose_name="زبان",
+    )
     key = models.CharField(
         max_length=200, verbose_name="نام متن مورد نظر", unique=True
     )

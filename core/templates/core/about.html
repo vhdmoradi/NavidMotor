@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
+{% get_current_language as lang %}
 
 
 {% block title %}
-    درباره ما
+    {% if lang == "fa" %} درباره ما {% elif lang == "en" %} About Us {% endif %}
 {% endblock title %}
     
 {% block content %}
@@ -21,11 +22,13 @@
         <div class="container">
             <div class="row">
                 <div class="text-justified">
-                    <h2 class="h4 fw-bolder mt-5 mb-3">گروه صنایع پمپ‌سازی ایران</h2>
+                    <h2 class="h4 fw-bolder mt-5 mb-3">{% if lang == "fa" %} گروه صنایع پمپ‌سازی ایران {% elif lang == "en" %} Pumpiran Industries Group {% endif %}</h2>
                     <p class="nm-text-color lh-lg">
                         {% for text in about_page_data %}
                             {% if "پمپیران" in text.key %}
-                            {{ text.value }}
+                                {% if lang == text.language %}
+                                    {{ text.value }}
+                                {% endif %}
                             {% else %}
                             {% endif %}
                         {% endfor %}
